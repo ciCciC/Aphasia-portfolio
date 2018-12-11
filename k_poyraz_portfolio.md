@@ -61,7 +61,12 @@ Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgend
 - Literatuur
   - [Google Cloud Storage documentatie](https://cloud.google.com/storage/docs/)
 
-<p>Aphasia API architectuur</p>
+<p>Aphasia API architectuur:</p>
 <img src="https://lh6.googleusercontent.com/6IFliwQ_TFydw6NoszMd55ehDxlc78tlU_ZaIyInH_Yzyp-DQ6jeerXTooMRPXLBnj-Mb8Q54CZcaTtOMzbq=w1920-h969" alt="drawing" width="400" height="500"/>
+
+Verder heb ik een Speech to Text notebook waar je een map met audio's kunt meegeven en de code in de notebook transformeert de audio naar tekst.
+
+
+<h3>- Alignment</h3>
 
 
