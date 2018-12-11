@@ -19,21 +19,24 @@ alt="drawing" width="600" height="400"/>
 <p>Script Cost Function</p>
 
 ```javascript
+# Initialisatie X (Input) dataset
 X = np.array([[1,1],[1,2],[1,3],[1,4]])
 print('X: ' + str(X))
 
+# Initialisatie y (Target) dataset
 y = np.array([1,2,3,4])
 print('y: ' + str(y))
 
+# Initialisatie Parameters
 theta = np.array([0, 1])
 print('theta: ' + str(theta))
 
-
+# De Hypothese berekening
 def h(theta, X):
     prediction = np.matmul(X, theta)
     return np.transpose(prediction)
 
-
+# De Kosten functie berekening
 def costfunction(X, y, theta):
     # Dit is hetzelfde als costfunctionAnders maar anders geprogrammeerd
     m = len(X)
@@ -42,6 +45,7 @@ def costfunction(X, y, theta):
     j = 1 / (2 * m) * np.sum(sqrtError)
     return j
 
+# De Kosten functie berekening
 def costfunctionAnders(X, y, theta):
     # Dit is hetzelfde als cost function maar anders geprogrammeerd
     temp = np.dot(X, theta) - y
@@ -50,8 +54,9 @@ def costfunctionAnders(X, y, theta):
 
 print('costfunction()')
 print(costfunction(X, y, theta))
-resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
+-> resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
+
 print('costfunctionAnders()')
 print(costfunctionAnders(X, y, theta))
-resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
+-> resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
 ```
