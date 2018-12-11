@@ -16,7 +16,6 @@ Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte t
 - Literatuur afasie
   - [Desk-research naar Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
   
-- Interview
 Bij de interviews was mijn taak niet alleen het stellen van vragen maar ook het opnemen van de interviews. Dit heb ik gedaan door gebruik te maken van de voicerecorder applicatie op mijn telefoon. Zodat we later de opnames nogmaals kunnen naluisteren voor verduidelijking van de gesprekken.
 
 - Literatuur AVG Google
