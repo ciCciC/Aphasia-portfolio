@@ -10,7 +10,7 @@
 <h2>Domain knowledge</h2>
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
-<h3>- Aphasia (afasie)</h3>
+<h3>- Vooronderzoek Aphasia (afasie)</h3>
 <p>Hier wordt een vooronderzoek gedaan naar afasie. Dit is van belang voor het opbouwen van kennis over afasie. Voor het opbouwen van kennis over Afasie heb ik gebruik gemaakt van de <b>techniek desk-research en interview</b>. Daarbij komen de <b>onderzoeksstrategie BIEB en VELD</b> bij kijken. Bij de literatuur wordt verwezen naar samenvattingen die ik van mijn desk-research heb gemaakt met daarin de referenties naar de bronnen:</p>
 
 - Literatuur
@@ -33,7 +33,7 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
 - Literatuur
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
-<h3>- API Aphasia met Google Services</h3>
+<h3>- Ontwikkelen API Aphasia met Google Services</h3>
 <p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creëren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
 
 Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
@@ -66,6 +66,6 @@ De architectuur van Aphasia API:
 Ook heb ik de Aphasia API omgezet in een notebook met extra functies waar je een map met audio's kunt meegeven en het creeren van CSV bestanden.
 - [stt_timestamps_generator](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
-<h3>- Alignment</h3>
+<h3>- Ontwikkelen Alignment</h3>
 
 
