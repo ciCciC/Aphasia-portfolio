@@ -50,19 +50,18 @@ Om de Speech to Text van Google te kunnen koppelen aan mijn API heb ik de volgen
 
 Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. 
 
-Eerste oplossing was een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
-<p>Snij functie</p>
+Eerste oplossing was, als we niet Cloud Storage mochten gebruiken vanwege AVG, een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
+<p>Snij functie:</p>
 <img src="https://lh6.googleusercontent.com/krM7eYlg4Sxjb3rAQPhXJOvr7GK3ii5w7T_DFrK0-swcbmrFZ1slBPRj1ZKnRbIBpeKRjcGiR2oXda-m-NBK=w1920-h969"
 alt="drawing" width="400" height="500"/>
 
-De oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
+Tweede oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
 
 Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
 - Literatuur
   - [Google Cloud Storage documentatie](https://cloud.google.com/storage/docs/)
 
 <p>Aphasia API architectuur</p>
-<img src="https://lh4.googleusercontent.com/4t4Zh6dmZxZIALZan5IRzNyZfJYVA3vqyFOTShG-2KzUt_TmyVznqyNQ44A0xbQESXQnyOq0kvZT599hkM5o=w1920-h969"
-alt="drawing" width="400" height="500"/>
+<img src="https://lh6.googleusercontent.com/6IFliwQ_TFydw6NoszMd55ehDxlc78tlU_ZaIyInH_Yzyp-DQ6jeerXTooMRPXLBnj-Mb8Q54CZcaTtOMzbq=w1920-h969" alt="drawing" width="400" height="500"/>
 
 
