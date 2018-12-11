@@ -1,4 +1,3 @@
-<p>De "programming assignments" zijn n.v.t.</p>
 <p>Ik heb de QUIZ "Octave/Matlab Tutorial" van WEEK 2 niet gedaan omdat het niet hoefde maar ik heb wel gespeeld met de COST FUNCTION in PYTHON, zie script helemaal onderaan deze pagina.</p>
 
 <p>Week 1</p>
@@ -18,6 +17,7 @@ alt="drawing" width="600" height="400"/>
 alt="drawing" width="600" height="400"/>
 
 <p>Script Cost Function</p>
+
 ```javascript
 X = np.array([[1,1],[1,2],[1,3],[1,4]])
 print('X: ' + str(X))
@@ -48,8 +48,10 @@ def costfunctionAnders(X, y, theta):
     return np.sum(np.power(temp, 2)) / (2*len(X))
 
 
-print('costfunction')
+print('costfunction()')
 print(costfunction(X, y, theta))
-print('costfunctionAnders')
+resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
+print('costfunctionAnders()')
 print(costfunctionAnders(X, y, theta))
+resultaat = 0.0, omdat de linear lijn goed door de data punten heen gaat, dus er zit geen verschil met de Y
 ```
