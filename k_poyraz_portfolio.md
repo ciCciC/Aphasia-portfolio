@@ -73,4 +73,4 @@ Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook (op de server) m
 
 <h3>- Ontwikkelen Alignment</h3>
 
-
+- [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
