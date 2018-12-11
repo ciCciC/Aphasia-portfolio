@@ -39,7 +39,7 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
 Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
   - [Github - Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
 
-Voordat ik begon met het selecteren van een Speech To Text Service heb ik eerst een desk-research gedaan welke services er allemaal bestaan.
+Om een overzicht te kunnen krijgen over de bestaande Speech to Text services heb ik een desk-research naar gedaan. Ik ben tot conclusie gekomen dat er services bestaan van grote bedrijven die de Nederlandse taal niet ondersteunen behalve Google.
+- Literatuur
   - [Bestaande Speech to Text services](https://drive.google.com/open?id=1odo6bqDnnt94Juf_-Ih-7UYFU-NXov1VFIhr93GRMb8)
-
 
