@@ -21,20 +21,21 @@ Om de opgestelde onderzoekvragen te kunnen beantwoorden heb ik  aantal documente
 - Literatuur
   - [Desk-research naar Fonologie](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
   
-Na het lezen van gebruik van fonetiek in wetenschappelijke artikelen over speech to text systemen vond ik het handig om een desk-research naar te doen om te kunnen begrijpen wat fonetiek inhoud.
+Na het lezen van gebruik van fonetiek in wetenschappelijke artikelen over speech to text systemen vond ik het handig om een desk-research naar te doen om te kunnen begrijpen wat fonetiek betekent.
 - Literatuur
   - [Desk-research naar Fonetiek](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
   
+  
 <p>Interview</p>
 Bij de interviews was mijn taak niet alleen het stellen van vragen maar ook het opnemen van de interviews. Dit heb ik gedaan door gebruik te maken van de voicerecorder applicatie op mijn telefoon. Zodat we later de opnames nogmaals kunnen naluisteren voor verduidelijking van de gesprekken.
-
 Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij Rijndam Instituut met mevrouw Ineke (opdrachtgever) en de security manager, die gaat over AVG, over het krijgen van benodigde audio data en de veiligheid van de data. Het gesprek over AVG was van belang voor het gebruik kunnen maken van de Google Services. Voornamelijk de Google Text to Speech en Cloud Storage services. Dit was in eerste instantie van belang voor het z.s.m. kunnen omzetten van de afasie audiobestanden naar tekst.
 
 - Literatuur
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
 <h3>- API Aphasia met Google Services</h3>
-<p>Opmerking:</p>
+<p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creeren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
 
-  - [Desk-research naar Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
+Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
+  - [Github - Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
