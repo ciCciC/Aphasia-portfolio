@@ -54,5 +54,5 @@ Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgend
   - [Google Cloud Storage documentatie](https://cloud.google.com/storage/docs/)
 
 <p>Aphasia API architectuur</p>
-<img src="https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU"
+<img src="https://lh4.googleusercontent.com/4t4Zh6dmZxZIALZan5IRzNyZfJYVA3vqyFOTShG-2KzUt_TmyVznqyNQ44A0xbQESXQnyOq0kvZT599hkM5o=w1920-h969"
 alt="drawing" width="600" height="400"/>
