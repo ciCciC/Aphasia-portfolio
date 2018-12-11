@@ -42,4 +42,17 @@ Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aph
 Om een overzicht te kunnen krijgen over de bestaande Speech to Text services heb ik een desk-research naar gedaan. Ik ben tot conclusie gekomen dat er services bestaan van grote bedrijven die de Nederlandse taal niet ondersteunen behalve Google.
 - Literatuur
   - [Bestaande Speech to Text services](https://drive.google.com/open?id=1odo6bqDnnt94Juf_-Ih-7UYFU-NXov1VFIhr93GRMb8)
+  
+Om de Speech to Text van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
+- Literatuur
+  - [Google Speech to Text documentatie](https://cloud.google.com/speech-to-text/docs/)
 
+Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. De oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
+
+Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
+- Literatuur
+  - [Google Cloud Storage documentatie](https://cloud.google.com/storage/docs/)
+
+<p>Aphasia API architectuur</p>
+<img src="https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU"
+alt="drawing" width="600" height="400"/>
