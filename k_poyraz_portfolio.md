@@ -5,4 +5,4 @@
 - DataCamp
   - [DataCamp certifications](https://github.com/ciCciC/Aphasia-portfolio/blob/master/datacamp/datacamp_certifications.md)
 - Coursera
-  - Like this
+  - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/datacamp/coursera.md)
