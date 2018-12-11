@@ -33,6 +33,9 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
 - Literatuur
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
+<h2>Data Preperation</h2>
+<p>Hieronder staan onderwerpen van taken die zijn verricht voor het voorbereiden van data. Elk onderwerp heeft zijn eigen plek in het project.</p>
+
 <h3>- Ontwikkelen API Aphasia met Google Services</h3>
 <p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creëren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
 
