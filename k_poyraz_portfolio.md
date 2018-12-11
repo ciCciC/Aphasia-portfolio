@@ -37,7 +37,8 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
 <p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creëren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
 
 Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
-  - [Github - Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
+- Aphasia-project Github
+  - [Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
 
 Om een overzicht te kunnen krijgen over de bestaande Speech to Text services heb ik een desk-research naar gedaan. Ik ben tot conclusie gekomen dat er services bestaan van grote bedrijven die de Nederlandse taal niet ondersteunen behalve Google.
 - Literatuur
@@ -47,7 +48,14 @@ Om de Speech to Text van Google te kunnen koppelen aan mijn API heb ik de volgen
 - Literatuur
   - [Google Speech to Text documentatie](https://cloud.google.com/speech-to-text/docs/)
 
-Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. De oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
+Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. 
+
+Eerste oplossing was een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
+<p>Snij functie</p>
+<img src="https://drive.google.com/file/d/16UPK4XQozjz5NT5cblhc8xMPL29ilMy9/view"
+alt="drawing" width="400" height="500"/>
+
+De oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
 
 Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
 - Literatuur
@@ -56,3 +64,5 @@ Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgend
 <p>Aphasia API architectuur</p>
 <img src="https://lh4.googleusercontent.com/4t4Zh6dmZxZIALZan5IRzNyZfJYVA3vqyFOTShG-2KzUt_TmyVznqyNQ44A0xbQESXQnyOq0kvZT599hkM5o=w1920-h969"
 alt="drawing" width="400" height="500"/>
+
+
