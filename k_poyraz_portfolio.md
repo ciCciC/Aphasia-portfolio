@@ -1,5 +1,5 @@
 <h1>Datascience kb-74: project Aphasia 2018</h1>
-
+<br />
 <h2>Courses</h2>
 
 - DataCamp
@@ -7,6 +7,7 @@
 - Coursera
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
 
+<br />
 <h2>Domain knowledge</h2>
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
@@ -47,11 +48,13 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
   - DTW (Dynamic Time Warping) wordt toegepast om woord signalen met elkaar te kunnen vergelijken. Hiervoor heb ik een desk-research gedaan en een samenvatting over geschreven.
   - [Onderzoek DTW algoritme](https://drive.google.com/open?id=1LXNcv708e6wNzxt1yUf-5IvGmn7w8j28)
 
+<br />
+<br />
 <h2>Data Collection</h2>
 <p><b>"Data collection"</b> is van belang voor de etappe <b>"Data Preperation"</b>. Hieronder staan onderwerpen van taken die zijn verricht voor het verzamelen en structureel opslaan van de data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project.</p>
 
-
-
+<br />
+<br />
 <h2>Data Preperation</h2>
 <p>Hieronder staan onderwerpen van taken die zijn verricht voor het voorbereiden van data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project.</p>
 
