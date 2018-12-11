@@ -34,7 +34,7 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
 <h3>- Belangrijke wetenschappelijke artikelen</h3>
-Deze artikelen hebben geholpen om een beeld te geven om dit project te kunnen aanpakken. Bijv. de feature extraction technieken die worden toegepast of een pipeline die wordt gehanteerd voor Speech Recognition systemen. Ook gaf deze informatie mij de gelegenheid een idee voor te leggen aan mijn projectgroep om de juiste richting op te gaan.
+Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kunnen aanpakken. Bijv. de feature extraction technieken die worden toegepast of een pipeline die wordt gehanteerd voor Speech Recognition systemen. Ook gaf deze informatie mij de gelegenheid een idee voor te leggen aan mijn projectgroep om de juiste richting op te gaan.
 
 - Literatuur
   - Geeft een beeld over de technieken die worden toegepast (op minder technisch niveau)
