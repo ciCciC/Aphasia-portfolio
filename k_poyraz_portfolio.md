@@ -39,7 +39,7 @@ Deze artikelen hebben geholpen om een beeld te geven om dit project te kunnen aa
 - Literatuur
   - Geeft een beeld over de technieken die worden toegepast (op minder technisch niveau)
   - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
-  - Geeft weer de stappen die worden genomen om de features te kunnen extracten van de audiosignalen (op technisch niveau)
+  - Geeft de stappen weer die worden genomen om de features te kunnen extracten van de audiosignalen (op technisch niveau)
   - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
   - Een GitHub repository met handige informatie over bestaande repositories voor een onderdeel van Speech Recognition systemen
   - [awesome-python-scientific-audio](https://github.com/faroit/awesome-python-scientific-audio#feature-extraction)
