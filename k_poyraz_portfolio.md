@@ -34,8 +34,12 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
 <h3>- API Aphasia met Google Services</h3>
-<p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creeren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
+<p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creëren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
 
 Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
   - [Github - Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
-  - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
+
+Voordat ik begon met het selecteren van een Speech To Text Service heb ik eerst een desk-research gedaan welke services er allemaal bestaan.
+  - [Bestaande Speech to Text services](https://drive.google.com/open?id=1odo6bqDnnt94Juf_-Ih-7UYFU-NXov1VFIhr93GRMb8)
+
+
