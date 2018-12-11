@@ -52,7 +52,7 @@ Google kent aantal regels als het komt tot transformeren van audio signaal naar 
 
 Eerste oplossing was een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
 <p>Snij functie</p>
-<img src="https://drive.google.com/file/d/16UPK4XQozjz5NT5cblhc8xMPL29ilMy9/view"
+<img src="https://drive.google.com/file/d/16UPK4XQozjz5NT5cblhc8xMPL29ilMy9/view?usp=sharing"
 alt="drawing" width="400" height="500"/>
 
 De oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
