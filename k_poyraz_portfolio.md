@@ -66,8 +66,10 @@ Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgend
 De architectuur van Aphasia API:
 - [Aphasia API architectuur PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
-Ook heb ik de Aphasia API omgezet in een notebook met extra functies waar je een map met audio's kunt meegeven en het creeren van CSV bestanden.
-- [stt_timestamps_generator](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
+<h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
+Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook (op de server) met extra functies om een batch te kunnen uitvoeren om een map vol met audio bestanden te kunnen transformeren naar tekst en het creeren van CSV bestanden als dataset, zie notebook voor verdere informatie.
+
+- [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
 <h3>- Ontwikkelen Alignment</h3>
 
