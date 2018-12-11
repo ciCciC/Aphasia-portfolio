@@ -33,14 +33,14 @@ Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij 
 - Literatuur
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
-<h3>- Belangrijke wetenschappelijke artikelen</h3>
+<h3>- Belangrijke artikelen</h3>
 Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kunnen aanpakken. Bijv. de feature extraction technieken die worden toegepast of een pipeline die wordt gehanteerd voor Speech Recognition systemen. Ook gaf deze informatie mij de gelegenheid een idee voor te leggen aan mijn projectgroep om de juiste richting op te gaan.
 
 - Literatuur
   - Geeft een beeld over de technieken die worden toegepast (op minder technisch niveau)
-  - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
+  - [A Review on Speech Recognition Technique (wetenschappelijke)](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
   - Geeft de stappen weer die worden genomen om de features te kunnen extracten van de audiosignalen (op technisch niveau)
-  - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
   - Een GitHub repository met handige informatie over bestaande repositories voor een onderdeel van Speech Recognition systemen
   - [awesome-python-scientific-audio](https://github.com/faroit/awesome-python-scientific-audio#feature-extraction)
 
