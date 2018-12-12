@@ -65,8 +65,8 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 - Notebook
   - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataVoxforge/ScrapingDataVoxforge.md)
   
-<h3>Extra - mappenstructuur voor collecteren van data</h3>
-<p>Als extra heb ik een methode geschreven die een mappenstructuur creert op de server voor het collecteren van de data. Dit geeft de mogelijkheid om makkelijk data op te slaan, verwerken en aanmaken. Dit maakt de paden naar de data overzichtelijk dus een beter overzicht waar wat staat op de server.</p>
+<h3>Extra - mappenstructuur voor verzamelde data</h3>
+<p>Als extra heb ik een methode geschreven die een mappenstructuur op de server creert voor de verzamelde data. Dit geeft de mogelijkheid om makkelijk data op te slaan, verwerken en aanmaken. Dit maakt de paden naar de data overzichtelijk dus een beter overzicht waar wat staat op de server.</p>
 
 - Notebook
   - [Initialiseren mappenstructuur notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/initialize_directory_structure/initialize_directory_structure.md)
