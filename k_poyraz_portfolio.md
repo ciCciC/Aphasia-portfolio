@@ -54,7 +54,7 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 <p><b>"Data collection"</b> is van belang voor de etappe <b>"Data Preperation"</b>. Hieronder staan onderwerpen van taken die zijn verricht voor het verzamelen en structureel opslaan van de data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project. Ik heb data verzamelt uit verschillende bronnen. De bronnen zijn <b>"VoxForge", "Uva" en "CORPUS".</b></p>
 
 <h3>- Uva data</h3>
-<p>fon.hum.uva is een website waar een gratis database wordt aangeboden met daarin gesproken audio bestanden met daarbij horende teksten.[link naar de website](http://www.fon.hum.uva.nl/IFA-SpokenLanguageCorpora/IFAcorpus/)</p>
+<p>fon.hum.uva is een website waar een gratis database wordt aangeboden met daarin gesproken audio bestanden met daarbij horende teksten.<a href="http://www.fon.hum.uva.nl/IFA-SpokenLanguageCorpora/IFAcorpus/">link naar de website</a></p>
 
 - Notebook
   - [Scraper Uva Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataUva/ScrapingDataUva.md)
