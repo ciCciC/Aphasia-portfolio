@@ -108,7 +108,7 @@ Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functi
   - [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
 <h3>- Ontwikkelen Alignment in notebooks</h3>
-<p></p>
+<p>Voor dit project heb ik een aligner script in notebook ontwikkeld. Ontwikkeling van de aligner was van belang voornamelijk voor het kunnen trainen van SPHINX (een kant en klare Speech to Text tool). Deze aligner is voornamelijk bestemd voor de data collectie van de "UVA" omdat de zinnen niet zijn alignt.</p>
 
 - Notebook
   - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
