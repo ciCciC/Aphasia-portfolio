@@ -102,10 +102,26 @@ De architectuur van Aphasia API:
 - [Aphasia API architectuur PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
 <h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
-Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de data collectie "Voxforge" om een map vol met audio bestanden te kunnen transformeren naar tekst en het creeren van CSV bestanden als dataset, zie notebook voor verdere informatie.
+Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de data collectie "Voxforge" om een map vol met audio bestanden te kunnen transformeren naar tekst en het creëren van CSV bestanden als dataset. Deze dataset wordt gebruikt bij de "Phoneme boundary generator". Zie notebook voor verdere informatie.
 
-- [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
+- Notebook
+  - [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
-<h3>- Ontwikkelen Alignment</h3>
+<h3>- Ontwikkelen Alignment in notebooks</h3>
+<p></p>
 
-- [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+- Notebook
+  - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+
+<h3>- Ontwikkelen transformer CORPUS data in notebooks</h3>
+<p>Transformeren CORPUS data in gewenste structuur als CSV bestand notebooks</p>
+
+- Notebook
+  - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+
+
+<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
+<p></p>
+
+- Notebook
+  - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
