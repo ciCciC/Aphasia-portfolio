@@ -63,7 +63,7 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 <p>VoxForge is een website waar gesproken audio bestanden met daarbij horende teksten gratis worden aangeboden. Voor VoxForge heb ik ook een scraper geschreven om de data hun website af te halen, want zoals bij Uva gebeurt downloaden per klik en dat kost veel tijd. Vandaar de scraper ook voor VoxForge. <a href="http://www.voxforge.org/home/downloads/speech/dutch">link naar de website</a>.</p>
 
 - Notebook
-  - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataUva/ScrapingDataVoxforge.md)
+  - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataVoxforge/ScrapingDataVoxforge.md)
 
 <h3>- CORPUS data</h3>
 <p></p>
