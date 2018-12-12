@@ -87,12 +87,12 @@ Om de Speech to Text van Google te kunnen koppelen aan mijn API heb ik de volgen
 
 Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. 
 
-Eerste oplossing was, als we niet Cloud Storage mochten gebruiken vanwege AVG, een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
+<b>Eerste oplossing</b> was, als we niet Cloud Storage mochten gebruiken vanwege AVG, een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
 Snij functie:
 - [Method slicing audio PNG](https://drive.google.com/open?id=16UPK4XQozjz5NT5cblhc8xMPL29ilMy9)
 - [Method slicing audio SCRIPT](https://github.com/ciCciC/Aphasia-project/blob/master/AudioTranscribe.py)
 
-Tweede oplossing was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
+<b>Tweede oplossing</b> was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
 
 Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
 - Literatuur
@@ -102,7 +102,7 @@ De architectuur van Aphasia API:
 - [Aphasia API architectuur PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
 <h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
-Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook (op de server) met extra functies om een batch te kunnen uitvoeren om een map vol met audio bestanden te kunnen transformeren naar tekst en het creeren van CSV bestanden als dataset, zie notebook voor verdere informatie.
+Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de data collectie "Voxforge" om een map vol met audio bestanden te kunnen transformeren naar tekst en het creeren van CSV bestanden als dataset, zie notebook voor verdere informatie.
 
 - [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
