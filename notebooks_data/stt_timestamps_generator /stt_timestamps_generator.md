@@ -1,7 +1,7 @@
 
 <h1>Script for getting boundaries (begin and endtime boundaries of each word of each sentence)</h1>
 <p>(c) Koray</p>
-<p>Deze script is zeer van belang. Hem hebben we gebruikt om te kijken of Google goed is in het genereren van timestamps en voor het genereren van de timestamps van de woorden in de gewenste structuur. Dus met deze script kunnen we de gewenste structuur met timestamps van woorden genereren welke we vervolgens nodig hebben voor de Phoneme Boundary Generator.</p>
+<p>Deze script is zeer van belang. Hem heb ik ontwikkeld en gebruikt om te kijken of Google goed is in het genereren van timestamps en voor het genereren van de timestamps van de woorden in de gewenste structuur. Dus met deze script kunnen we de gewenste structuur met timestamps van woorden genereren welke we vervolgens nodig hebben voor de Phoneme Boundary Generator.</p>
 
 
 ```python
