@@ -108,7 +108,7 @@ De architectuur van Aphasia API:
 - [Aphasia API architectuur PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
 <h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
-Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de data collectie "Voxforge" om een map vol met audio bestanden te kunnen transformeren naar tekst en het creëren van CSV bestanden als dataset. Deze dataset wordt gebruikt bij de "Phoneme boundary generator". Zie notebook voor verdere informatie.
+Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de <b>data collectie "Voxforge"</b> om een map vol met audio bestanden te kunnen transformeren naar woord timestamps en het creëren van CSV bestanden als dataset. Deze datasets bestaat uit kolommen "begin", "end", "word" en "audiopath" die uiteindelijk gebruikt zal worden bij de "Phoneme boundary generator". Zie notebook voor verdere informatie.
 
 - Notebook
   - [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
