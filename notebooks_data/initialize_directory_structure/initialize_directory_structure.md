@@ -78,7 +78,4 @@ initDirStructure('corpus', '15068145')
 
 
 <p>De naam datasource spreekt voor zich, E.G. Uva of VoxForge data collectie. In het map original staan de originele bestanden opgeslagen dus zoals ze van de source worden ontvangen. Het map transform bestaat uit wavfiles, clean en align. Wavfiles bevat de geconverteerde audiobestanden naar extensie Wav. Hierdoor hoef je niet iedere keer een conversie te uitvoeren, wat invloed heeft op de snelheid van het runnen van je transformatie Script. Clean bevat de tekstbestanden die zijn opgeschoond van ongewenste karakters of ongestructureerde body. Hierdoor zijn ze klaar voor het Aligment proces van de zinnen of gebruikt worden voor een ander doel dat vraagt om een gestructureerde body. In het map Align worden audiosegmenten opgeslagen met daarbij behorende zinnen.</p>
-
-<img src="2.png" width="800" height="400"/>
-
-<img src="1.png" width="800" height="400"/>
+<img src="1.png" width="400" height="400"/>
