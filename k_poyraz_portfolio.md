@@ -51,13 +51,17 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 <br />
 <br />
 <h2>Data Collection</h2>
-<p><b>"Data collection"</b> is van belang voor de etappe <b>"Data Preperation"</b>. Hieronder staan onderwerpen van taken die zijn verricht voor het verzamelen en structureel opslaan van de data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project. Ik heb data verzamelt uit verschillende bronnen. De bronnen zijn <b>"VoxForge", "Uva" en "CORPUS"</b></p>
+<p><b>"Data collection"</b> is van belang voor de etappe <b>"Data Preperation"</b>. Hieronder staan onderwerpen van taken die zijn verricht voor het verzamelen en structureel opslaan van de data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project. Ik heb data verzamelt uit verschillende bronnen. De bronnen zijn <b>"VoxForge", "Uva" en "CORPUS".</b></p>
 
-<h3>- Uva</h3>
+<h3>- Uva data</h3>
+<p>Uva is een webpagina</p>
+  - [Scraper Uva Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataUva/ScrapingDataUva.md)
 
-<h3>- VoxForge</h3>
+<h3>- VoxForge data</h3>
+<p></p>
 
-<h3>- CORPUS</h3>
+<h3>- CORPUS data</h3>
+<p></p>
 
 <br />
 <br />
