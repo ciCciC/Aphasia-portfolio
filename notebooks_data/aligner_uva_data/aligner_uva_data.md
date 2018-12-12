@@ -3,7 +3,7 @@
 
 (c) Koray
 
-<p>Dit is een script die de data van de UVA in de gewenste structuur zet welke nodig is om SPHINX te kunnen trainen. Deze script alignt een zin in een audio signaal en slaat die data op in een csv bestand met de gerelateerde wav bestand.</p>
+<p>Dit is een script die de data van de UVA in de gewenste structuur zet welke nodig is om <b>SPHINX</b> te kunnen trainen. Deze script alignt een zin in een audio signaal en slaat die data op in een csv bestand met de gerelateerde wav bestand.</p>
 <p>De gewenste structuur welke nodig is om SPHINX te kunnen trainen ziet er als volgt uit:</p>
 <p>E.G. [s]Today is a rainy day[/s] user/koray/audiofiles/weather.wav</p>
 
