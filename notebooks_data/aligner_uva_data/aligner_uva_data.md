@@ -3,7 +3,7 @@
 
 (c) Koray
 
-<p>Dit is een script die de data van de UVA in de gewenste structuur zet welke nodig is om <b>SPHINX</b> te kunnen trainen. Deze script alignt een zin in een audio signaal en slaat die data op in een csv bestand met de gerelateerde wav bestand.</p>
+<p>Dit is een script die de data van de UVA in de gewenste structuur zet welke nodig is om SPHINX te kunnen trainnen. Deze script alignt een zin in een audio signaal en slaat die data op in een csv bestand met de gerelateerde wav bestand.</p>
 <p>De gewenste structuur welke nodig is om SPHINX te kunnen trainen ziet er als volgt uit:</p>
 <p>E.G. [s]Today is a rainy day[/s] user/koray/audiofiles/weather.wav</p>
 
@@ -22,6 +22,9 @@ import csv
 from subprocess import call
 import re
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.io import wavfile
 
 from pydub import AudioSegment
 import glob
@@ -285,19 +288,276 @@ for fragment in fragments:
     begin: 168000	end:169000	sentence:
 
 
+<h3>Een visualisatie van de gesneden zinnen van de data van hierboven.</h3>
+
+
+```python
+import matplotlib.patches as mpatches
+
+# Een methode om de boundary van de zinnen te plotten.
+def display_plot_audio_time(audioPath, audiosegmenten):
+    rate, signal = wavfile.read(audioPath)
+
+    Time = np.linspace(0, len(signal) / rate, num=len(signal))
+
+    fig = plt.figure(1, figsize=(15,8))
+
+    plt.title('Boundaries van de gesneden zinnen')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Amplitude')
+
+    ax = fig.add_subplot(111)
+    ax.plot(Time, signal, alpha=0.8, color='lime')
+
+    ax.patch.set_facecolor('black')
+
+    xcoords = set()
+
+    for index, x in enumerate(audiosegmenten):
+        if index < len(audiosegmenten)-1:
+            xcoords.add(float(x[0]))
+            xcoords.add(float(x[1]))
+
+    for xc in xcoords:
+        plt.axvline(x=xc, color='red', linestyle='--', linewidth=4)
+        
+    red_patch = mpatches.Patch(color='red', label='zin boundary')
+    green_patch = mpatches.Patch(color='green', label='audio signaal')
+    
+    plt.legend(handles=[red_patch, green_patch], prop={'size': 25})
+
+    plt.tight_layout()
+    plt.show()
+
+    
+audioFile = '/datb/aphasia/languagedata/uva/transform/wavfiles/M58D2PS.wav'
+exampleDir = '/datb/aphasia/languagedata/uva/transform/sentencealign/M58D2PS/*'
+folder = getFiles(exampleDir)
+jsonPath = list(filter(lambda x: 'json' in x, folder))[0].split('.')[0]
+fragments = list(readJson(jsonPath, '', 'json'))[0]['fragments']
+fragments = [[x['begin'], x['end'], ''.join(x['lines'])] for x in fragments[1:]]
+
+display_plot_audio_time(audioFile, fragments)
+```
+
+
+![png](output_12_0.png)
+
+
 <p>Een voorbeeld van een resultaat na het uivoeren van de aligner script. Dit is dus de uiteindelijke structuur die SPHINX nodig heeft om getraind te kunnen worden en dit wordt gerealiseerd door deze aligner script.</p>
 
 
 ```python
-exampleFile = '/datb/aphasia/languagedata/uva/testfinal/audio.txt'
+exampleFile = '/datb/aphasia/languagedata/uva/transform/sentencealign/M58D2PS/M58D2PS.csv'
 
-with open(exampleFile, 'r') as toRead:
-    read = toRead.readline()
-    while(read):
-        print(read)
-        read = toRead.readline()
+data_df = pd.read_csv(exampleFile, sep=',', skiprows=1, names=['audiopath', 'sentence'])
+data_df = data_df.dropna()
+data_df
 ```
 
-    <s> uh de noordenwind en de zon hadden uh hadden ruzie over wie de sterkste van hun tweeen was </s> (/datb/aphasia/languagedata/uva/testfinal/original.wav)
-    
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>audiopath</th>
+      <th>sentence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>toen praten hun die stem</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de deur liep in degene die niet meer kon</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>ze kon het horen komen en droomde</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de uil kon ze niet meer plukken</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>hij trok een bloem zingt en kwam</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>deste tierde zij hem op de vond</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>kwaad kon hij rond de nachtegalen</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>wanneer ging hij ze in zon</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>harder onderging hij rond joringel</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>toen kon hij die lijden</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de schapen waren weg naar reiziger</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>joringel trok haar aan de kooien</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de noordenwind kon</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de vrouw bekeek naar helft</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>het kasteel droomde naar betovering</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>groot kwam hij rond jorinde</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de nachtegaal zou haar om de was</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>het kasteel liep over mij niet meer gewezen</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>krom ging hij rond de tortelduif</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de schapen kon ze niet meer moesten</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>ze was in de bloem bekeken en weggepakt</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de deur zingt naar vogels</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>joringel vloog haar aan de was</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>het kasteel tovert naar het ringetje</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>joringel had zijn aan de hand</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>wanneer had hij zich doen</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>groot beweegt hij rond de struik</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>jorinde liep in ze niet meer gewoond</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>zo raakte de kooien verlost en jammerden</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>de betovering huilde ie niet meer droeg</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>ze keek de fluiten praten en liep erin</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>ze kwamen overeen een zon kon en raakte</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>een avond was in</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>joringel komt</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>/datb/aphasia/languagedata/uva/transform/sente...</td>
+      <td>toen zou hij ze buurt</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
