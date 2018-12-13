@@ -120,18 +120,32 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 <h3>- Ontwikkelen Alignment in notebooks</h3>
 <p>Voor dit project heb ik een aligner script in notebook ontwikkeld. Ontwikkeling van de aligner was van belang voornamelijk voor het kunnen trainen van SPHINX (een kant en klare Speech to Text tool). Deze aligner is voornamelijk bestemd voor de data collectie van de "UVA" omdat de zinnen niet zijn alignt.</p>
 
+<p>Voor het kiezen van een goede bibliotheek voor het alignen van zinnen heb ik eerst een desk-research gedaan. Ik ben toen de bibliotheek "Aeneas" tegengekomen welke vaak wordt gebruikt voor alignen van zinnen.</p>
+
+- Aeneas documentatie
+  - [Aeneas documentation](https://www.readbeyond.it/aeneas/docs/)
+
+- Aeneas bibliotheek
+  - [Aeneas library](https://www.readbeyond.it/aeneas/)
+
 - Notebook
   - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
 
 <h3>- Ontwikkelen transformer CORPUS data in notebooks</h3>
-<p>Transformeren CORPUS data in gewenste structuur als CSV bestand notebooks</p>
+<p>Voor de data van CORPUS heb ik een transformer geschreven die de data van CORPUS naar de gewenste structuur transformeert bestaande uit kolommen "begin", "end", "word" en "audiopath" en als CSV bestand opslaat. Deze data wordt gebruikt bij de Phoneme Boundary Generator. Zie notebook voor verdere info. Deze uiteindelijke data wordt overigens ook gebruikt door mijn projectgenoten. Dus ik heb het niet alleen voor mezelf gedaan maar ook voor mijn projectgenoten.</p>
 
 - Notebook
-  - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
-
+  - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
 <h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
-<p></p>
+<p>Na "Data Collection" en bovenstaande "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
+
+Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
+- Bron
+  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+
+- Bibliotheek
+  - [python speech features library](https://github.com/jameslyons/python_speech_features)
 
 - Notebook
-  - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+  - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
