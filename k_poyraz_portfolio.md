@@ -146,7 +146,7 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 
 <br />
 <h2>Predictive Models</h2>
-Om een model te kunnen trainen met de verzamelde data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
+Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
 
 - Machine learning
   - Random Forest Classifier
@@ -159,6 +159,8 @@ Om een model te kunnen trainen met de verzamelde data heb ik aantal machine en d
 Voor sommige van de bovenstaande modellen heb ik gebruik gemaakt van Scikit-Learn en Tensorflow Core bibliotheek.
 
 Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkheden zoals selectie van de GPU cores, toepassing van activation function per neurale netwerk laag en hij is meer geschikt voor het ontwikkelen van deep learning netwerken.
+
+Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
 
 <br />
 <h2>Data Visualization</h2>
