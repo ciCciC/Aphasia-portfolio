@@ -145,6 +145,22 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
 <br />
+<h2>Predictive Models</h2>
+Om een model te kunnen trainen met de verzamelde data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
+
+- Machine learning
+  - Random Forest Classifier
+
+- Deep learning
+  - MLP (Multi Layer Perceptron)
+  - Bi-LSTM (bi-directional Long Short-Term Memory)
+  - Convolutional neural network
+  
+Voor sommige van de bovenstaande modellen heb ik gebruik gemaakt van Scikit-Learn en Tensorflow Core bibliotheek.
+
+Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkheden zoals selectie van de GPU cores, toepassing van activation function per neurale netwerk laag en hij is meer geschikt voor het ontwikkelen van deep learning netwerken.
+
+<br />
 <h2>Data Visualization</h2>
 
 <br />
@@ -163,9 +179,6 @@ Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb
 
 - Notebook
   - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
-
-<br />
-<h2>Predictive Models</h2>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
