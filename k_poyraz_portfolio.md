@@ -144,9 +144,10 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 - Notebook
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
-
+<br />
 <h2>Data Visualization</h2>
 
+<br />
 <h2>Evaluation</h2>
 
 - Experiment
@@ -163,6 +164,8 @@ Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb
 - Notebook
   - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
 
+<br />
 <h2>Predictive Models</h2>
 
+<br />
 <h2>Diagnostics of the learning process</h2>
