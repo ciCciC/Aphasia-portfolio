@@ -168,8 +168,8 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 <br />
 <h2>Evaluation</h2>
 
-- Experiment
-<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
+<h3>Experiment</h3>
+<p>- Ontwikkelen Phoneme boundary generator in notebooks</p>
 <p>Na "Data Collection" en "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
 
 Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
@@ -180,7 +180,7 @@ Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs he
   - [python speech features library](https://github.com/jameslyons/python_speech_features)
 
 - Notebook
-  - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+  - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_v1/phoneme_boundary_generator_v1.md)
 
 <br />
 <h2>Diagnostics of the learning process</h2>
