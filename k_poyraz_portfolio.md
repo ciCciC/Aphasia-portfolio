@@ -8,6 +8,13 @@
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
 
 <br />
+<h2>Communication</h2>
+
+- Presentations
+- Summaries
+- Paper
+<br />
+
 <h2>Domain knowledge</h2>
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
@@ -137,6 +144,12 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 - Notebook
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
+
+<h2>Data Visualization</h2>
+
+<h2>Evaluation</h2>
+
+- Experiment
 <h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
 <p>Na "Data Collection" en bovenstaande "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
 
@@ -149,3 +162,7 @@ Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb
 
 - Notebook
   - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+
+<h2>Predictive Models</h2>
+
+<h2>Diagnostics of the learning process</h2>
