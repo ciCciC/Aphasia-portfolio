@@ -219,3 +219,48 @@ Image(url= file3, width=1000, height=400)
 <img src="3.png" width="1000" height="400"/>
 
 
+
+<h3>De hertz van de audio converteren naar de gewenste hertz</h3>
+<p>Dit onderdeel is van belang voor de audio naar MFCC transformatie voor het krijgen van de features bij het onderdeel "Phoneme Boundary Generator".</p>
+<p>Dit hoeft maar 1x uitgevoerd te worden!</p>
+
+
+```python
+folderpath = '/datb/aphasia/languagedata/voxforge/transform/align/'
+
+# Get all csv files where the audiopaths are saved
+files = getFiles(folderpath)
+
+# First check if all audio is in the format WAV before transforming to another HERTZ
+count = 0
+for fileIndex in range(0, len(files)):
+    for audio in readDict(files[fileIndex]):
+        audiopath = audio['audiopath'].split('/')[-1]
+        count += 1 if 'wav' not in audiopath else 0
+
+print('Amount of non-wav files: {}'.format(count))
+print('Lookup is finished')
+
+
+# A batch for converting all VoxForge audiofiles to a desired HERTZ which is 16000hz
+if(count == 0):
+    for fileIndex in range(0, len(files)):
+        for audio in readDict(files[fileIndex]):
+            try:
+                audiofile = AudioSegment.from_wav(audio['audiopath'])
+                transform_audio_hertz(audiofile, audio['audiopath'], 'wav', 16000)
+            except FileNotFoundError:
+                separated = audio['audiopath'].split('/')
+                newName = re.sub('ï»¿', '',separated[-1].lower())
+                newAudioPath = '/'.join(separated[:-1]) + '/' + newName
+                audiofile = AudioSegment.from_wav(newAudioPath)
+                transform_audio_hertz(audiofile, audio['audiopath'],'wav', 16000)
+
+    print('Converting hertz is finished')
+else:
+    print('There are non-wav files!')
+```
+
+    Amount of non-wav files: 0
+    Lookup is finished
+    Converting hertz is finished
