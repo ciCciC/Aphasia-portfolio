@@ -1,4 +1,4 @@
-<h1>Datascience kb-74: project Aphasia 2018</h1>
+<h1>Datascience kb-74: project Aphasia 2018 PORTFOLIO</h1>
 <br />
 <h2>Courses</h2>
 
@@ -8,6 +8,13 @@
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
 
 <br />
+<h2>Communication</h2>
+
+- Presentations
+- Summaries
+- Paper
+<br />
+
 <h2>Domain knowledge</h2>
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
@@ -137,10 +144,35 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 - Notebook
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
-<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
-<p>Na "Data Collection" en bovenstaande "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
+<br />
+<h2>Predictive Models</h2>
+Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
 
-Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
+- Machine learning
+  - Random Forest Classifier
+
+- Deep learning
+  - MLP (Multi Layer Perceptron)
+  - Bi-LSTM (bi-directional Long Short-Term Memory)
+  - Convolutional neural network
+  
+Voor sommige van de bovenstaande modellen heb ik gebruik gemaakt van Scikit-Learn en Tensorflow Core bibliotheek.
+
+Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkheden zoals selectie van de GPU cores, toepassing van activation function per neurale netwerk laag en hij is meer geschikt voor het ontwikkelen van deep learning netwerken.
+
+Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
+
+<br />
+<h2>Data Visualization</h2>
+
+<br />
+<h2>Evaluation</h2>
+
+- Experiment
+<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
+<p>Na "Data Collection" en "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
+
+Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
 - Bron
   - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
 
@@ -149,3 +181,6 @@ Voor feature extraction van de audiosignalen dus het verkrijgen van de MFCCs heb
 
 - Notebook
   - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
+
+<br />
+<h2>Diagnostics of the learning process</h2>
