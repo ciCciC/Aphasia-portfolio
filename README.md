@@ -73,6 +73,9 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 
 - Notebook
   - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataVoxforge/ScrapingDataVoxforge.md)
+
+<h3>- CORPUS data</h3>
+<p>CORPUS is een grote data bestaande uit Nederlands gesproken audio met gerelateerd woorden. Deze data is gratis verkrijgbaar op <a href="https://ivdnt.org/nieuws">deze link</a>. De data is gedownload en opgeslagen op de server door onze projectbegeleider. Voor het transformeren van de data naar de gewenste structuur om er mee aan de slag te kunnen heb ik een transformer geschreven. Die staat beschreven onder "Data Preperation".</p>
   
 <h3>Extra - mappenstructuur voor verzamelde data</h3>
 <p>Als extra heb ik een methode geschreven die een mappenstructuur op de server creert voor de verzamelde data. Dit geeft de mogelijkheid om makkelijk data op te slaan, verwerken en aanmaken. Dit maakt de paden naar de data overzichtelijk dus een beter overzicht waar wat staat op de server.</p>
