@@ -193,6 +193,12 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 
 <br />
 <h2>Data Visualization</h2>
+<p>Hieronder heb ik een visualisatie van de datasets die zijn gegenereert door V2 en V3 generators.</p>
+
+<h3>Data V2</h3>
+<img src="/notebooks_data/data_visualization/1nondifference.png" width="400" height="400"/>
+
+<h3>Data V2</h3>
 
 <br />
 <h2>Evaluation</h2>
