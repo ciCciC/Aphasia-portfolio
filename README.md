@@ -159,7 +159,6 @@ Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde dat
 - Deep learning
   - MLP (Multi Layer Perceptron)
   - Bi-LSTM (bi-directional Long Short-Term Memory)
-  - Convolutional neural network
   
 Voor sommige van de bovenstaande modellen heb ik gebruik gemaakt van Scikit-Learn en Tensorflow Core bibliotheek.
 
