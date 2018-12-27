@@ -184,7 +184,8 @@ Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs he
   - [python speech features library](https://github.com/jameslyons/python_speech_features)
 
 - Notebook
-  - [Phoneme boundary generator v1](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_v1/phoneme_boundary_generator_v1.md)
+  - [Phoneme boundary generator v2](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v2/phoneme_boundary_generator_v2.md)
+  - [Phoneme boundary generator v3](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
 
 <br />
 <h2>Diagnostics of the learning process</h2>
