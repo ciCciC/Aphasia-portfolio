@@ -149,9 +149,25 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 - Notebook
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
+<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
+<p>Na "Data Collection" en "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
+
+<p>Ik heb twee soorten generators ontwikkeld. De "V2" slaat de samengevoegde N milliseconden op, zoals hierboven beschreven, en "V3" slaat alleen het verschillen tussen de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord op. Hiermee wil ik dus kijken welke een betere validation acc. en recall score levert. Voor verdere informatie over deze versies zie de notebooks.</p>
+
+Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
+- Bron
+  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+
+- Bibliotheek
+  - [python speech features library](https://github.com/jameslyons/python_speech_features)
+
+- Notebook
+  - [Phoneme boundary generator v2](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v2/phoneme_boundary_generator_v2.md)
+  - [Phoneme boundary generator v3](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+
 <br />
 <h2>Predictive Models</h2>
-Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
+Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde Nederlands gesproken CORPUS data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
 
 - Machine learning
   - Random Forest Classifier
@@ -164,28 +180,22 @@ Voor sommige van de bovenstaande modellen heb ik gebruik gemaakt van Scikit-Lear
 
 Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkheden zoals selectie van de GPU cores, toepassing van activation function per neurale netwerk laag en hij is meer geschikt voor het ontwikkelen van deep learning netwerken.
 
-Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
+Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator (CORPUS NL)</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
+
+- Random Forest Classifier
+  - [Random Forest Classifier notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+  
+- MLP (Multi Layer Perceptron)
+  - [MLP notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+  
+- Bi-LSTM
+  - [Bi-LSTM notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
 
 <br />
 <h2>Data Visualization</h2>
 
 <br />
 <h2>Evaluation</h2>
-
-<h3>Experiment</h3>
-<p>- Ontwikkelen Phoneme boundary generator in notebooks</p>
-<p>Na "Data Collection" en "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
-
-Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
-- Bron
-  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
-
-- Bibliotheek
-  - [python speech features library](https://github.com/jameslyons/python_speech_features)
-
-- Notebook
-  - [Phoneme boundary generator v2](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v2/phoneme_boundary_generator_v2.md)
-  - [Phoneme boundary generator v3](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
 
 <br />
 <h2>Diagnostics of the learning process</h2>
