@@ -196,14 +196,20 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 <p>Hieronder heb ik een visualisatie van de datasets die zijn gegenereert door V2 en V3 generators. Elke dataset bestaat uit de kolommen "region", "label", "sample_rate", "begin", "end" en "audiopath".</p>
 
 <h3>- Data V2</h3>
+<p>Overzicht dataset</p>
 <img src="/notebooks_data/data_visualization/1nondifference.png" width="1000" height="400"/>
+<p>Info datatypes</p>
 <img src="/notebooks_data/data_visualization/2nondifference.png" width="300" height="200"/>
+<p>Visualizatie N milliseconden audio signaal en MFCCs</p>
 <img src="/notebooks_data/data_visualization/3nondifference.png" width="640" height="300"/>
 
 <h3>- Data V3</h3>
+<p>Overzicht dataset</p>
 <img src="/notebooks_data/data_visualization/1difference.png" width="1000" height="400"/>
+<p>Info datatypes</p>
 <img src="/notebooks_data/data_visualization/2difference.png" width="300" height="200"/>
-<img src="/notebooks_data/data_visualization/3difference.png" width="640" height="300"/>
+<p>Visualizatie N milliseconden audio signaal en MFCCs</p>
+<img src="/notebooks_data/data_visualization/3difference.png" width="640" height="400"/>
 
 <br />
 <h2>Evaluation</h2>
