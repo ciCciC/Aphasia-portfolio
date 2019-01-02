@@ -185,10 +185,10 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 - Random Forest Classifier
   - [Random Forest Classifier notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
   
-- MLP (Multi Layer Perceptron)
+- MLP classifier (Multi Layer Perceptron)
   - [MLP notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
   
-- Bi-LSTM
+- Bi-LSTM classifier
   - [Bi-LSTM notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
 
 <br />
@@ -214,9 +214,12 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 <br />
 <h2>Evaluation</h2>
 
-<h3>Random Forest Classifier</h3>
-<p>Bij dit onderdeel heb ik eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie notebook.</p>
+<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de notebook per model.</p>
 
+<h3>Random Forest Classifier</h3>
+
+- notebook
+  - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
   
 <p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "max depth" en "estimators"</p>
 -  Max depth
@@ -232,8 +235,8 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/20_40_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/98_100_est.png" width="500" height="350"/>
 Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en test accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste test accuracy score.
-<br />
-Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige dataset.
+
+<p>Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
 
 - dataset: df_nondifference
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
@@ -242,6 +245,8 @@ Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
+
+<h3>MLP Classifier</h3>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
