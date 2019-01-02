@@ -232,14 +232,16 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/20_40_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/98_100_est.png" width="500" height="350"/>
 Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en test accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste test accuracy score.
-
+<br />
 Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige dataset.
 
 - dataset: df_nondifference
-<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="500"/>
+<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
 
 - dataset: df_difference
-<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="550" height="450"/>
+<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/>
+
+<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
