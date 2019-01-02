@@ -420,6 +420,7 @@ plotResult(train_accuracy, val_accuracy, n_estimators, 'Een test op 1 t/m 10 est
 
 
     Max validation acc.: 0.5617766666666667
+    Hier zien we dat de validation niet ver afstaat van de training na 5 estimators. Een goede generalization.
 
 
 
@@ -433,7 +434,7 @@ print('Hier zien we dat de waarde 32 een beste resultaat geeft.')
 
 
     Max validation acc.: 0.5640533333333333
-    Hier zien we dat de validation ver afstaat van de training. Een vorm van overfitting.
+    Hier zien we dat de validation niet ver afstaat van de training.
 
 
 
