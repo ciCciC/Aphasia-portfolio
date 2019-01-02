@@ -247,6 +247,12 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
 
 <h3>MLP Classifier</h3>
+- notebook
+  - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
+
+<p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "num layers"</p>
+
+
 
 <br />
 <h2>Diagnostics of the learning process</h2>
