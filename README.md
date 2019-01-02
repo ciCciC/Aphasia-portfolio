@@ -222,10 +222,11 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 -  Max depth
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/max_depth.png" width="450" height="350"/>
 Uit de plot van hierboven zien we dat het model complexer wordt dus overfit wanneer de waarde voor "Max of depth" hoger is dan 5. Dit geeft mij nu de mogelijkheid om een max depth te kiezen om een grotere dataset te gebruiken voor het trainen van het model.
-
+<br />
 - Estimator
 
 Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewenste aantal dataset te kunnen realizeren heb ik een functie geschreven die een gebalanceerde gewenste aantal dataset teruggeeeft genaamd "getBatchData()", zie notebook.
+
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/1_10_est.png" width="500" height="350"/>
 
 
