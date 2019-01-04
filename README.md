@@ -253,13 +253,18 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 
 <p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "num layers"</p>
 -  Num neurons
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/num_neurons.png" width="450" height="350"/>
+In de plot van aantal neurons kunnen we zien dat hij kampt met overfitting na 60 neurons.
 <br/>
 <br/>
 -  Learning rate
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/learningrate.png" width="450" height="350"/>
+In de plot van learning rate kunnen we zien dat de validation accuracy omlaag gaat bij hoger learning rate.
 <br/>
 <br/>
 -  Num layers
-
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/layers.png" width="450" height="350"/>
+In de plot van aantal layers kunnen we zien dat de validation accuracy omlaag gaat en training accuracy hoger bij meer layers dus hij overfit.
 
 <br />
 <h2>Diagnostics of the learning process</h2>
