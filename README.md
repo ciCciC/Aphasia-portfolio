@@ -234,7 +234,7 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/1_10_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/20_40_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/98_100_est.png" width="500" height="350"/>
-<p>Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en test accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste test accuracy score.</p>
+<p>Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en validation accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste validation accuracy score.</p>
 
 <p>Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
 
@@ -249,7 +249,7 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <h3>MLP Classifier</h3>
 
 - notebook
-  - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
+  - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
 
 <p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "num layers"</p>
 -  Num neurons
@@ -277,8 +277,15 @@ Aangezien de focus op class 1 ligt is 70 neurons interessant.</p>
 <p>In deze plots kunnen we zien dat de Recall slechter scoort bij meer dan 1 layer bij class 1.
 Aangezien de focus op class 1 ligt is 1 layer interessant.</p>
 
+<p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes gaan we gebruiken om een MLP classifier.</p>
 
+<p>Na deze selectie van de waarde voor "num neuronsh", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
 
+- dataset: df_nondifference
+<!-- <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/> -->
+
+- dataset: df_difference
+<!-- <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/> -->
 
 <br />
 <h2>Diagnostics of the learning process</h2>
