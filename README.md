@@ -265,6 +265,20 @@ In de plot van learning rate kunnen we zien dat de validation accuracy omlaag ga
 -  Num layers
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/layers.png" width="450" height="350"/>
 In de plot van aantal layers kunnen we zien dat de validation accuracy omlaag gaat en training accuracy hoger bij meer layers dus hij overfit.
+<br />
+
+Hier kijk ik naar wat voor Recall score de verschillende waardes van de hypermeter "num_neurons" geven.
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/recallneurons.png" style="width:100%" height="300"/>
+In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.
+Aangezien de focus op class 1 ligt is 70 neurons interessant.
+
+Hier kijk ik naar wat voor Recall score de verschillende waardes van de hypermeter "num_layers" geven.
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/recalllayers.png" style="width:100%" height="300"/>
+In deze plots kunnen we zien dat de Recall slechter scoort bij meer dan 1 layer bij class 1.
+Aangezien de focus op class 1 ligt is 1 layer interessant.
+
+
+
 
 <br />
 <h2>Diagnostics of the learning process</h2>
