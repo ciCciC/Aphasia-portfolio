@@ -279,13 +279,15 @@ Aangezien de focus op class 1 ligt is 1 layer interessant.</p>
 
 <p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes gaan we gebruiken om een MLP classifier.</p>
 
-<p>Na deze selectie van de waarde voor "num neuronsh", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
+<p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
 
 - dataset: df_nondifference
-<!-- <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/> -->
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/nondiff.png" width="600" height="300"/>
 
 - dataset: df_difference
-<!-- <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/> -->
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP/diff.png" width="600" height="300"/>
+
+<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
