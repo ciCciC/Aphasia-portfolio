@@ -512,36 +512,26 @@ print('Aangezien de focus op class 1 ligt is 1 layer interessant.')
 
 
 <h3>Trainen model</h3>
-<p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes  gaan we gebruiken om een MLP classifier te trainen. Deze keer met 1 miljoen data.</p>
+<p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes  gaan we gebruiken om een MLP classifier te trainen.</p>
 
 
 ```python
-batch_size = 1000000
+# Delete unwanted element
+indexToDelete = 640417
+print(len(balancedX))
+print(len(balancedY))
 
-X_batch, y_batch = getBatchData(balancedX, balancedY, batch_size)
+balancedX.pop(indexToDelete)
+balancedY = np.delete(balancedY, indexToDelete, 0)
 
-print(f'X: {len(X_batch)}, y: {len(y_batch)}')
+print(len(balancedX))
+print(len(balancedY))
 ```
 
-    X: 1000000, y: 1000000
-
-
-
-```python
-fig , ax = plt.subplots(figsize=(6,4))
-sns.countplot(x='label', data=pd.DataFrame({'label':y_batch}))
-plt.title(f"After batch: label verhouding")
-```
-
-
-
-
-    Text(0.5, 1.0, 'After batch: label verhouding')
-
-
-
-
-![png](output_42_1.png)
+    3629478
+    3629478
+    3629477
+    3629477
 
 
 
@@ -550,10 +540,10 @@ plt.title(f"After batch: label verhouding")
 test_size = 0.3
 random_state = 42
 
-X_train, X_test, y_train, y_test = train_test_split(X_batch, y_batch, 
+X_train, X_test, y_train, y_test = train_test_split(balancedX, balancedY, 
                                                     test_size=test_size, 
                                                     random_state=random_state, 
-                                                    stratify=y_batch)
+                                                    stratify=balancedY)
 ```
 
 
@@ -600,27 +590,25 @@ print('Train_score:{}'.format(train_score))
 print('Val_score:{}'.format(val_score))
 ```
 
-    Train_score:0.6371857142857142
-    Val_score:0.6145333333333334
+    Train_score:0.6249989667929213
+    Val_score:0.6171719732119569
 
 
 
 ```python
 from sklearn.metrics import classification_report, confusion_matrix
-
 predictions = mlp.predict(X_test)
-
 print(classification_report(y_test, predictions))
 ```
 
                   precision    recall  f1-score   support
     
-               0       0.60      0.70      0.65    150000
-               1       0.64      0.53      0.58    150000
+               0       0.61      0.67      0.63    544422
+               1       0.63      0.57      0.60    544422
     
-       micro avg       0.61      0.61      0.61    300000
-       macro avg       0.62      0.61      0.61    300000
-    weighted avg       0.62      0.61      0.61    300000
+       micro avg       0.62      0.62      0.62   1088844
+       macro avg       0.62      0.62      0.62   1088844
+    weighted avg       0.62      0.62      0.62   1088844
     
 
 
@@ -638,7 +626,7 @@ plt.show()
 ```
 
 
-![png](output_52_0.png)
+![png](output_51_0.png)
 
 
 
@@ -680,40 +668,7 @@ plt.title(f"After oversampling of label {label}")
 
 
 
-![png](output_56_1.png)
-
-
-<p>Het model trainen met 1 miljoen dataset.</p>
-
-
-```python
-# 1 miljoen dataset
-batch_size = 1000000
-
-X_batch_diff, y_batch_diff = getBatchData(balancedX_diff, balancedY_diff, batch_size)
-
-print(f'X: {len(X_batch_diff)}, y: {len(y_batch_diff)}')
-```
-
-    X: 1000000, y: 1000000
-
-
-
-```python
-fig , ax = plt.subplots(figsize=(6,4))
-sns.countplot(x='label', data=pd.DataFrame({'label':y_batch_diff}))
-plt.title(f"Kijken of de verhouding nog goed is gebleven na batchen")
-```
-
-
-
-
-    Text(0.5, 1.0, 'Kijken of de verhouding nog goed is gebleven na batchen')
-
-
-
-
-![png](output_59_1.png)
+![png](output_55_1.png)
 
 
 <h3>Initialiseer split</h3>
@@ -723,10 +678,10 @@ plt.title(f"Kijken of de verhouding nog goed is gebleven na batchen")
 test_size = 0.3
 random_state = 42
 
-X_train, X_test, y_train, y_test = train_test_split(X_batch_diff, y_batch_diff, 
+X_train, X_test, y_train, y_test = train_test_split(balancedX_diff, balancedY_diff, 
                                                     test_size=test_size, 
                                                     random_state=random_state, 
-                                                    stratify=y_batch_diff)
+                                                    stratify=balancedY_diff)
 ```
 
 <h3>Trainen model</h3>
@@ -773,27 +728,26 @@ print('Train_score:{}'.format(train_score))
 print('Val_score:{}'.format(val_score))
 ```
 
-    Train_score:0.5970057142857143
-    Val_score:0.58414
+    Train_score:0.5910751741404956
+    Val_score:0.5876218500823814
 
 
 
 ```python
 predictions_diff = mlp_diff.predict(X_test)
-
 print(classification_report(y_test, predictions_diff))
 ```
 
                   precision    recall  f1-score   support
     
-               0       0.58      0.60      0.59    150000
-               1       0.59      0.57      0.58    150000
+               0       0.58      0.64      0.61    544419
+               1       0.60      0.54      0.57    544419
     
-       micro avg       0.58      0.58      0.58    300000
-       macro avg       0.58      0.58      0.58    300000
-    weighted avg       0.58      0.58      0.58    300000
+       micro avg       0.59      0.59      0.59   1088838
+       macro avg       0.59      0.59      0.59   1088838
+    weighted avg       0.59      0.59      0.59   1088838
     
 
 
 <h3>Conclusie</h3>
-<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft maar een lager RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
+<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
