@@ -289,6 +289,10 @@ Aangezien de focus op class 1 ligt is 1 layer interessant.</p>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
 
+<h3>bi-d LSTM Classifier</h3>
+
+
+
 <br />
 <h2>Diagnostics of the learning process</h2>
 
