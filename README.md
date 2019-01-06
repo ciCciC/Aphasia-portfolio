@@ -156,7 +156,7 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
 
 Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
 - Bron
-  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+  - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
 
 - Bibliotheek
   - [python speech features library](https://github.com/jameslyons/python_speech_features)
@@ -186,10 +186,10 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
   
 - MLP classifier (Multi Layer Perceptron)
-  - [MLP notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+  - [phoneme boundary MLP Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
   
 - Bi-LSTM classifier
-  - [Bi-LSTM notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+  - [phoneme boundary Bi-LSTM Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
 
 <br />
 <h2>Data Visualization</h2>
