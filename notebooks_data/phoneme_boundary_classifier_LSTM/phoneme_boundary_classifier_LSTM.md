@@ -697,7 +697,7 @@ print(len(balancedY))
 
 
 ```python
-<p>Initialiseer split</p>X_arr = np.array(balancedX)
+X_arr = np.array(balancedX)
 Y_arr = np.array(balancedY)
 
 N_INSTANCES = len(X_arr)
