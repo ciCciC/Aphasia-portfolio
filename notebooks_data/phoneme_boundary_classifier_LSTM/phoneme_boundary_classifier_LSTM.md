@@ -56,7 +56,7 @@ config.gpu_options.allow_growth = True
 
 
 ```python
-# Deze methode verricht oversampling
+# Deze methode verricht oversampling met de gewenste dataset grootte.
 def getBatchData(X_more, y_more, size):
     """
     X_more = de input data
@@ -124,11 +124,13 @@ def plotRecallPrecision(recall_scorelist, precision_scorelist, num, title, xlabe
     plt.show()
     
 
+#     Methode om de resultaten van de train accuracy, validation accuracy, recall en precision te plotten.
 def plotResults(train_acc, val_acc, num1, recall_scorelist, precision_scorelist, num, xlabel, title1, xlabel2, title2, figsize):
     #     For train and val acc.
     fig = plt.figure(1, figsize=figsize)
     subplot_num = 220
     
+    #     Voor train en val acc.
     ax1 = fig.add_subplot(subplot_num+1)
     ax1.set_title(title1)
     ax1.plot(num1, val_acc, label = 'Validation Accuracy')
@@ -137,7 +139,7 @@ def plotResults(train_acc, val_acc, num1, recall_scorelist, precision_scorelist,
     ax1.set_ylabel('Accuracy')
     ax1.set_xlabel(xlabel)
     
-    #     For recall and precision.
+    #     Voor recall en precision score.
     ax2 = fig.add_subplot(subplot_num+2)
     
     recall_1 = list(map(lambda x: x[1], recall_scorelist))
@@ -154,7 +156,6 @@ def plotResults(train_acc, val_acc, num1, recall_scorelist, precision_scorelist,
     ax2.set_xlabel(xlabel2)
     ax2.set_ylabel('Acc %')
         
-#     plt.tight_layout()
     plt.subplots_adjust(top=6, right=4)
 
     
@@ -358,6 +359,8 @@ plt.title(f"After batch: label verhouding")
 <h3>Model selection</h3>
 <p>Eerst kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "training steps".</p>
 
+<p>Initialiseer one hot encoding voor de labels</p>
+
 
 ```python
 N_INSTANCES = len(X_batch)
@@ -371,6 +374,8 @@ print(labels_.shape)
 
     (300000, 2)
 
+
+<p>Initialiseer split</p>
 
 
 ```python
@@ -448,6 +453,7 @@ precision_scorelist = []
 
 
 ```python
+# Voor het opslaan van de train en val acc.
 hist_train_acc = []
 hist_val_acc = []
 ```
@@ -461,6 +467,7 @@ val_acc = np.empty(1)
 
 
 ```python
+# Methode voor het aanroepen van een volgende batch in de dataset waarmee een model wordt getraind.
 def next_batch(num, data, labels):
     '''
     Return a total of `num` random samples and labels. 
@@ -474,6 +481,7 @@ def next_batch(num, data, labels):
     return np.asarray(data_shuffle), np.asarray(labels_shuffle)
 
 
+# Initialiseren van de tf placeholders waarmee we gaan werken.
 def initPlaceholders(timesteps, num_input, num_classes):
     X = tf.placeholder('float', [None, timesteps, num_input])
     Y = tf.placeholder('float', [None, num_classes])
@@ -481,6 +489,7 @@ def initPlaceholders(timesteps, num_input, num_classes):
     return [X, Y]
 
 
+# Initialiseren van de tf variabelen voor de weights en biases die we nodig hebben.
 def initVariable(num_neurons, num_classes):
     weights = {
         'out': tf.Variable(tf.random_normal([2*num_neurons, num_classes]))
@@ -522,7 +531,7 @@ def BiRNN(x, weights, biases, num_neurons, timesteps, dropout):
     return tf.matmul(outputs[-1], weights['out']) + biases['out']
 
 
-
+# Methode voor het uitvoeren van een sessie met de meegegeven parameters
 def runSession(index, config, training_steps, batch_size, X_train, y_train, timesteps, num_input, train_op, loss_op, accuracy, logits):
     # Initialize the variables (i.e. assign their default value)
     init = tf.global_variables_initializer()
@@ -564,6 +573,8 @@ def runSession(index, config, training_steps, batch_size, X_train, y_train, time
         recall_scorelist.append(recall_score(y_true, y_pred, pos_label=1, average=None))
         precision_scorelist.append(precision_score(y_true, y_pred, pos_label=1, average=None))
 ```
+
+<p>Runnen model</p>
 
 
 ```python
@@ -635,7 +646,7 @@ print('In de linker plot zien we dat we te maken hebben met overfitting.')
 
 
 
-![png](output_38_1.png)
+![png](output_41_1.png)
 
 
 <p>Hier kijk ik naar welke waarde voor de hyperparameter "learning rate" beste resultaat geeft.</p>
@@ -655,7 +666,7 @@ omlaag gaat bij hoger learning rate.')
 
 
 
-![png](output_40_1.png)
+![png](output_43_1.png)
 
 
 <p>Hier kijk ik naar de aantal training steps voor een beste resultaat.</p>
@@ -675,7 +686,7 @@ het hoogst is bij circa 8200 learning steps.')
 
 
 
-![png](output_42_1.png)
+![png](output_45_1.png)
 
 
 <h3>Trainen model</h3>
@@ -724,7 +735,7 @@ print(labels_.shape)
 
 
 ```python
-<h3>Initialiseer split</h3>TEST_SIZE = 0.3
+TEST_SIZE = 0.3
 RANDOM_STATE = 42
 
 X_train, X_test, y_train, y_test = train_test_split(X_arr, labels_,
@@ -763,6 +774,8 @@ timesteps = 10
 num_neurons = 70
 num_classes = 2
 ```
+
+<p>Runnen model</p>
 
 
 ```python
@@ -835,7 +848,7 @@ plt.show()
 ```
 
 
-![png](output_57_0.png)
+![png](output_61_0.png)
 
 
 
@@ -877,7 +890,7 @@ plt.title(f"After oversampling of label {label}")
 
 
 
-![png](output_61_1.png)
+![png](output_65_1.png)
 
 
 <p>Initialiseer one hot encoding</p>
