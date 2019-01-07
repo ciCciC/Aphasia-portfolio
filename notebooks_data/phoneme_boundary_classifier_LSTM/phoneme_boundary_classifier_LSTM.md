@@ -399,10 +399,11 @@ print('y_test:{}'.format(y_test.shape))
 
 ```python
 # Training Parameters
-# learning_rate = 0.001
-training_steps = 4000
+learning_rate = 0.001
+training_steps = 2000
 batch_size = 128
 display_step = 1
+dropout = 0.5
 ```
 
 
@@ -410,7 +411,7 @@ display_step = 1
 # Network Parameters
 num_input = 13 # Data input (data shape: 10x13=130) <- 13 MFCCs Coefficients
 timesteps = 10 # timesteps <- 10 milliseconden
-num_neurons = 70
+# num_neurons = 70
 num_classes = 2
 ```
 
@@ -492,7 +493,7 @@ def initVariable(num_neurons, num_classes):
     return [weights, biases]
     
 
-def BiRNN(x, weights, biases, num_neurons, timesteps):
+def BiRNN(x, weights, biases, num_neurons, timesteps, dropout):
     # Prepare data shape to match `rnn` function requirements
     # Current data input shape: (batch_size, timesteps, n_input)
     # Required shape: 'timesteps' tensors list of shape (batch_size, num_input)
@@ -503,10 +504,13 @@ def BiRNN(x, weights, biases, num_neurons, timesteps):
     initializer = tf.contrib.layers.xavier_initializer()
 
     # Define lstm cells with tensorflow
-    # Forward direction cell
+    # Forward direction cell plus dropout
     lstm_fw_cell = rnn.LSTMCell(num_neurons, forget_bias=1.0, initializer=initializer)
-    # Backward direction cell
+#     lstm_fw_cell = tf.nn.rnn_cell.DropoutWrapper(lstm_fw_cell, output_keep_prob=dropout)
+
+    # Backward direction cell plus dropout
     lstm_bw_cell = rnn.LSTMCell(num_neurons, forget_bias=1.0, initializer=initializer)
+#     lstm_bw_cell = tf.nn.rnn_cell.DropoutWrapper(lstm_bw_cell, output_keep_prob=dropout)
 
     # Get lstm cell output
     try:
@@ -555,8 +559,8 @@ def runSession(index, config, training_steps, batch_size, X_train, y_train, time
         val_accuracy, y_pred = sess.run([accuracy, y_p], feed_dict={X: test_data, Y: test_label})
         y_true = np.argmax(test_label, 1)
 
-        train_acc[index] = max(hist_train_acc)
-        val_acc[index] = val_accuracy
+        train_acc_neuron[index] = max(hist_train_acc)
+        val_acc_neuron[index] = val_accuracy
         recall_scorelist.append(recall_score(y_true, y_pred, pos_label=1, average=None))
         precision_scorelist.append(precision_score(y_true, y_pred, pos_label=1, average=None))
 ```
@@ -564,22 +568,22 @@ def runSession(index, config, training_steps, batch_size, X_train, y_train, time
 
 ```python
 print("In progress..")
-for i, k in enumerate(num_learningrate):
+for i, k in enumerate(num_neurons):
     tf.reset_default_graph()
     
     print(f'Iteratie: {i}, learningrate: {k}')
     X, Y = initPlaceholders(timesteps, num_input, num_classes)
 
-    weights, biases = initVariable(num_neurons, num_classes)
+    weights, biases = initVariable(k, num_classes)
     
-    logits = BiRNN(X, weights, biases, num_neurons, timesteps)
+    logits = BiRNN(X, weights, biases, k, timesteps, dropout)
     
     prediction = tf.nn.softmax(logits)
 
     # Define loss and optimizer
     loss_op = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=Y))
 
-    optimizer = tf.train.AdamOptimizer(learning_rate=k)
+    optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
 
     train_op = optimizer.minimize(loss_op)
     
@@ -589,20 +593,26 @@ for i, k in enumerate(num_learningrate):
     
     # run and train model
     print("Training model..")
-    runSession(i, config, training_steps, batch_size, X_train, y_train, 
+    runSession(i, config, training_steps, batch_size, X_train, y_train,
                timesteps, num_input, train_op, loss_op, accuracy, logits)
     
 print("Finished")
 ```
 
     In progress..
-    Iteratie: 0, learningrate: 0.3
+    Iteratie: 0, learningrate: 60
     Training model..
-    Iteratie: 1, learningrate: 0.01
+    Iteratie: 1, learningrate: 70
     Training model..
-    Iteratie: 2, learningrate: 0.001
+    Iteratie: 2, learningrate: 80
     Training model..
-    Iteratie: 3, learningrate: 0.0001
+    Iteratie: 3, learningrate: 90
+    Training model..
+    Iteratie: 4, learningrate: 100
+    Training model..
+    Iteratie: 5, learningrate: 110
+    Training model..
+    Iteratie: 6, learningrate: 120
     Training model..
     Finished
 
@@ -617,13 +627,11 @@ plotResults(train_acc_neuron, val_acc_neuron, num_neurons,
                     'aantal neurons', 'Recall en Precision results', (2,1))
 
 print('In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.')
-print('In de linker plot zien we dat we te maken hebben met overfitting na 60 neurons.')
-print('Aangezien de focus op class 1 ligt is 70 neurons interessant.')
+print('In de linker plot zien we dat we te maken hebben met overfitting.')
 ```
 
     In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.
-    In de linker plot zien we dat we te maken hebben met overfitting na 60 neurons.
-    Aangezien de focus op class 1 ligt is 70 neurons interessant.
+    In de linker plot zien we dat we te maken hebben met overfitting.
 
 
 
