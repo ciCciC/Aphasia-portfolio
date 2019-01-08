@@ -20,6 +20,10 @@
 <h2>Domain knowledge</h2>
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
+<h3>Jargon</h3>
+- API = dus hier de definitie van dus wat het betekent
+- Notebook = ....
+
 <h3>- Vooronderzoek Aphasia (afasie)</h3>
 <p>Hier wordt een vooronderzoek gedaan naar afasie. Dit is van belang voor het opbouwen van kennis over afasie. Voor het opbouwen van kennis over Afasie heb ik gebruik gemaakt van de <b>techniek desk-research en interview</b>. Daarbij komen de <b>onderzoeksstrategie BIEB en VELD</b> bij kijken. Bij de literatuur wordt verwezen naar samenvattingen die ik van mijn desk-research heb gemaakt met daarin de referenties naar de bronnen:</p>
 
