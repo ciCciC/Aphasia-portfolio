@@ -314,6 +314,48 @@ In de plot van learning rate kunnen we zien dat de validation accuracy en Recall
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_42_1.png" width="650" height="350"/>
 In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het hoogst is bij circa 8200 learning steps. Echter kampen we bij de linker plot met een overfitting.
 
+<p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "aantal trainingsteps" heb ik het model getraind met de volledige datasets.</p>
+
+- dataset: df_nondifference
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/nondifference.png" width="600" height="300"/>
+
+- dataset: df_difference
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/difference.png" width="600" height="300"/>
+
+<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Bi-LSTM een vergelijkbaar validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
+
 <br />
 <h2>Diagnostics of the learning process</h2>
 
+<h3>Random Forest Classifier</h3>
+
+- notebook
+  - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
+
+
+<h3>MLP Classifier</h3>
+
+- notebook
+  - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
+
+
+<h3>Bi-d LSTM Classifier</h3>
+
+- notebook
+  - [phoneme boundary Bi-LSTM classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_classifier_LSTM/phoneme_boundary_classifier_LSTM.md)
+  
+<p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "learningsteps"</p>
+-  Num neurons
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_38_1.png" width="650" height="350"/>
+In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.
+In de linker plot zien we dat we echter te maken hebben met overfitting.
+<br/>
+<br/>
+-  Learning rate
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_40_1.png" width="650" height="350"/>
+In de plot van learning rate kunnen we zien dat de validation accuracy en Recall score bij class 1 omlaag gaat bij hoger learning rate.
+<br/>
+<br/>
+-  aantal trainingsteps
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_42_1.png" width="650" height="350"/>
+In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het hoogst is bij circa 8200 learning steps. Echter kampen we bij de linker plot met een overfitting.
