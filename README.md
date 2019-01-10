@@ -186,7 +186,7 @@ Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkh
 
 Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator (CORPUS NL)</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
 
-Het doel van het uitproberen van deze modellen is om uiteindelijk een model te gebruiken.
+Het doel van het uitproberen van deze modellen is om uiteindelijk een model te kiezen om hem te trainen met de dataset.
 
 - Random Forest Classifier
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
@@ -196,6 +196,8 @@ Het doel van het uitproberen van deze modellen is om uiteindelijk een model te g
   
 - Bi-LSTM classifier
   - [phoneme boundary Bi-LSTM Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+
+<p>De dataset die is gegenereerd met de V2 phoneme boundary generator wordt gebruikt bij de volgende onderwerpen: Oversampling, Model Selection, Evaluation en Diagnosis. De reden hiervoor is omdat hij een betere resultaat levert in validation accuracy en recall score.</p>
 
 <br />
 <h2>Data Visualization</h2>
@@ -315,13 +317,10 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - notebook
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
 
-<p>Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
+<p>Na model selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
 
 - dataset: df_nondifference
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
-
-- dataset: df_difference
-<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
 
@@ -334,9 +333,6 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 - dataset: df_nondifference
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/nondiff.png" width="600" height="300"/>
-
-- dataset: df_difference
-<img src="/notebooks_data/phoneme_boundary_scikit_MLP/diff.png" width="600" height="300"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
 
