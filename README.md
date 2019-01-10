@@ -219,13 +219,13 @@ Het doel van het uitproberen van deze modellen is om uiteindelijk een model te g
 
 <br />
 <h2>Oversampling</h2>
-<p>Om skewed classes tegen te gaan heb ik een "generateMoreData()" functie geschreven om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Deze functie is geimplementeerd in de notebooks van de modellen.</p>
+<p>Om <b>skewed classes</b> tegen te gaan heb ik een "generateMoreData()" functie geschreven om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Deze functie is geimplementeerd in de notebooks van de modellen.</p>
 
-<p>Before oversampling</p>
+<p>Before oversampling - hier is overduidelijk te zien dat de dataset kampt met <b>skewed classes</b> want de verhouding tussen label 0 en 1 is niet gebalanceerd.</p>
 <img src="/notebooks_data/oversampling/before.png" width="450" height="350"/>
 
-<p>After oversampling</p>
-<img src="/notebooks_data/oversampling/after.png" width="450" height="350"/>
+<p>After oversampling - hier is duidelijk te zien dat de dataset goed is gebalanceerd.</p>
+<img src="/notebooks_data/oversampling/after.png" width="650" height="500"/>
 
 <br />
 <h2>Model Selection</h2>
@@ -236,18 +236,7 @@ Het doel van het uitproberen van deze modellen is om uiteindelijk een model te g
 - notebook
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
 
-
-<br />
-<h2>Evaluation</h2>
-
-<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de notebook per model.</p>
-
-<h3>Random Forest Classifier</h3>
-
-- notebook
-  - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
-  
-<p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "max depth" en "estimators"</p>
+<p>Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "max depth" en "estimators"</p>
 -  Max depth
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/max_depth.png" width="450" height="350"/>
 Uit de plot van hierboven zien we dat het model complexer wordt dus overfit wanneer de waarde voor "Max of depth" hoger is dan 5. Dit geeft mij nu de mogelijkheid om een max depth te kiezen om een grotere dataset te gebruiken voor het trainen van het model.
@@ -262,21 +251,11 @@ Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewe
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/98_100_est.png" width="500" height="350"/>
 <p>Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en validation accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste validation accuracy score.</p>
 
-<p>Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
-
-- dataset: df_nondifference
-<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
-
-- dataset: df_difference
-<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/>
-
-<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
-
 <h3>MLP Classifier</h3>
 
 - notebook
   - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
-
+  
 <p>Een "model selection". Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "num layers"</p>
 -  Num neurons
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/num_neurons.png" width="450" height="350"/>
@@ -304,6 +283,31 @@ Aangezien de focus op class 1 ligt is 70 neurons interessant.</p>
 Aangezien de focus op class 1 ligt is 1 layer interessant.</p>
 
 <p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes gaan we gebruiken om een MLP classifier.</p>
+
+<br />
+<h2>Evaluation</h2>
+
+<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de notebook per model.</p>
+
+<h3>Random Forest Classifier</h3>
+
+- notebook
+  - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
+
+<p>Na deze selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
+
+- dataset: df_nondifference
+<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
+
+- dataset: df_difference
+<img src="/notebooks_data/phoneme_boundary_random_forest_classifier/diff.png" width="600" height="300"/>
+
+<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
+
+<h3>MLP Classifier</h3>
+
+- notebook
+  - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
 
 <p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
 
