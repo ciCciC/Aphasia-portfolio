@@ -233,6 +233,26 @@ print(f'X: {len(balancedX)}, y: {len(balancedY)}')
 
 
 ```python
+# Delete unwanted element
+indexToDelete = 640417
+print(len(balancedX))
+print(len(balancedY))
+
+balancedX.pop(indexToDelete)
+balancedY = np.delete(balancedY, indexToDelete, 0)
+
+print(len(balancedX))
+print(len(balancedY))
+```
+
+    3629478
+    3629478
+    3629477
+    3629477
+
+
+
+```python
 fig , ax = plt.subplots(figsize=(6,4))
 sns.countplot(x='label', data=pd.DataFrame({'label':balancedY}))
 plt.title(f"After oversampling of label {label}")
@@ -246,7 +266,7 @@ plt.title(f"After oversampling of label {label}")
 
 
 
-![png](output_17_1.png)
+![png](output_18_1.png)
 
 
 <p>Een batch data gebruiken om een model te testen zodat niet hele dataset wordt gebruikt.</p>
@@ -280,7 +300,7 @@ plt.title(f"After batch: label verhouding")
 
 
 
-![png](output_21_1.png)
+![png](output_22_1.png)
 
 
 <h3>Initialiseer split</h3>
@@ -345,7 +365,7 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![png](output_27_0.png)
 
 
 <p>Uit de plot van hierboven zien we dat het model complexer wordt dus overfit wanneer de waarde voor "Max of depth" hoger is dan 5.</p>
@@ -416,7 +436,7 @@ plotResult(train_accuracy, val_accuracy, n_estimators, 'Een test op 1 t/m 10 est
 ```
 
 
-![png](output_32_0.png)
+![png](output_33_0.png)
 
 
     Max validation acc.: 0.5617766666666667
@@ -429,7 +449,7 @@ print('Hier zien we dat de waarde 32 een beste resultaat geeft.')
 ```
 
 
-![png](output_33_0.png)
+![png](output_34_0.png)
 
 
     Max validation acc.: 0.5640533333333333
@@ -443,7 +463,7 @@ print('Hier zien we dat de validation lijn horizontaal blijft en niet hoger gaat
 ```
 
 
-![png](output_34_0.png)
+![png](output_35_0.png)
 
 
     Max validation acc.: 0.5638666666666666
@@ -452,6 +472,18 @@ print('Hier zien we dat de validation lijn horizontaal blijft en niet hoger gaat
 
 <h3>Trainen model</h3>
 <p>Van de resultaten hierboven zien we dat 32 estimators hoogste validation acc geeft. Die waarde plus de waarde van max depth gaan we gebruiken om een RandomForest classifier trainen.</p>
+
+
+```python
+# Split data with train_test_split()
+test_size = 0.3
+random_state = 42
+
+X_train, X_test, y_train, y_test = train_test_split(balancedX, balancedY, 
+                                                    test_size=test_size, 
+                                                    random_state=random_state, 
+                                                    stratify=balancedY)
+```
 
 
 ```python
@@ -482,8 +514,8 @@ print('Train_score:{}'.format(train_score))
 print('Val_score:{}'.format(val_score))
 ```
 
-    Train_score:0.6066714285714285
-    Val_score:0.5979
+    Train_score:0.5632143642942526
+    Val_score:0.5624157363221912
 
 
 
@@ -497,12 +529,12 @@ print(classification_report(y_test,predictions))
 
                   precision    recall  f1-score   support
     
-               0       0.62      0.52      0.56     15000
-               1       0.59      0.67      0.63     15000
+               0       0.57      0.54      0.55    544422
+               1       0.56      0.59      0.57    544422
     
-       micro avg       0.60      0.60      0.60     30000
-       macro avg       0.60      0.60      0.60     30000
-    weighted avg       0.60      0.60      0.60     30000
+       micro avg       0.56      0.56      0.56   1088844
+       macro avg       0.56      0.56      0.56   1088844
+    weighted avg       0.56      0.56      0.56   1088844
     
 
 
@@ -519,7 +551,7 @@ plt.show()
 ```
 
 
-![png](output_42_0.png)
+![png](output_44_0.png)
 
 
 
@@ -561,7 +593,7 @@ plt.title(f"After oversampling of label {label}")
 
 
 
-![png](output_46_1.png)
+![png](output_48_1.png)
 
 
 <p>Het model trainen met 1 miljoen dataset.</p>
@@ -594,7 +626,7 @@ plt.title(f"Kijken of de verhouding nog goed is gebleven na batchen")
 
 
 
-![png](output_49_1.png)
+![png](output_51_1.png)
 
 
 <h3>Initialiseer split</h3>
