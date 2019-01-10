@@ -208,7 +208,7 @@ plt.show()
 
 
 ```python
-X, y = getData(df_difference)
+X, y = getData(df_nondifference)
 
 print(f'X: {len(X)}, y: {len(y)}')
 ```
@@ -420,7 +420,6 @@ plotResult(train_accuracy, val_accuracy, n_estimators, 'Een test op 1 t/m 10 est
 
 
     Max validation acc.: 0.5617766666666667
-    Hier zien we dat de validation niet ver afstaat van de training lijn. Een goede generalization.
 
 
 
@@ -434,7 +433,7 @@ print('Hier zien we dat de waarde 32 een beste resultaat geeft.')
 
 
     Max validation acc.: 0.5640533333333333
-    Hier zien we dat de validation niet ver afstaat van de training.
+    Hier zien we dat de validation ver afstaat van de training. Een vorm van overfitting.
 
 
 
@@ -483,8 +482,8 @@ print('Train_score:{}'.format(train_score))
 print('Val_score:{}'.format(val_score))
 ```
 
-    Train_score:0.5654957142857143
-    Val_score:0.5638833333333333
+    Train_score:0.6066714285714285
+    Val_score:0.5979
 
 
 
@@ -498,12 +497,12 @@ print(classification_report(y_test,predictions))
 
                   precision    recall  f1-score   support
     
-               0       0.58      0.49      0.53    150000
-               1       0.56      0.64      0.59    150000
+               0       0.62      0.52      0.56     15000
+               1       0.59      0.67      0.63     15000
     
-       micro avg       0.56      0.56      0.56    300000
-       macro avg       0.57      0.56      0.56    300000
-    weighted avg       0.57      0.56      0.56    300000
+       micro avg       0.60      0.60      0.60     30000
+       macro avg       0.60      0.60      0.60     30000
+    weighted avg       0.60      0.60      0.60     30000
     
 
 
