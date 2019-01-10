@@ -324,8 +324,6 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - Train, validation acc., Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
 
-<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
-
 <h3>MLP Classifier</h3>
 
 - notebook
@@ -336,8 +334,6 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - Train, validation acc., Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/nondiff.png" width="600" height="300"/>
 
-<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
-
 <h3>Bi-d LSTM Classifier</h3>
 
 <p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "aantal trainingsteps" heb ik het model getraind met de volledige datasets.</p>
@@ -347,15 +343,19 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
-<p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Bi-LSTM een vergelijkbaar validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
+
+| Score %        | RFC           | MLP   | Bi-LSTM   |
+| -------------  |:-------------:| -----:| ---------:|
+| Training acc.  | 0.565         |   $12 |   $12 |
+| Validation acc.| 0.563         |   $12 |   $12 |
+| Recall [0]     | 0.49          |    $1 |   $12 |
+| Recall [1]     | 0.64          |    $1 |   $12 |
+| Precision [0]  | 0.58          |    $1 |   $12 |
+| Precision [1]  | 0.56          |    $1 |   $12 |
+
+<p></p>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
 
 Uiteindelijk 1 model!
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
