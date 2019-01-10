@@ -354,3 +354,9 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <h2>Diagnostics of the learning process</h2>
 
 Uiteindelijk 1 model!
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
