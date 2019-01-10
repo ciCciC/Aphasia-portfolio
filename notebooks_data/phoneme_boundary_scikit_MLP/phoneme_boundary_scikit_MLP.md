@@ -459,22 +459,11 @@ print('In de plot van aantal layers kunnen we zien dat de validation accuracy om
 
 
 ```python
-plotResult(train_acc_neuron, val_acc_neuron, num_neurons, 
-           'Number of neurons', 'MLP: Varying Number of layers')
-
 plotRecallPrecision(recall_scorelist, precision_scorelist, num_neurons, 'Recall en Precision results', 'aantal neurons')
 
 print('In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.')
 print('Aangezien de focus op class 1 ligt is 70 neurons interessant.')
 ```
-
-
-![png](output_37_0.png)
-
-
-    Max validation acc.: 0.6132
-
-
 
 ![png](output_37_2.png)
 
