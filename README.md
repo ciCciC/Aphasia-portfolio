@@ -344,8 +344,9 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 <p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "aantal trainingsteps" heb ik het model getraind met de volledige datasets.</p>
 
-- Train en validation acc.
+- Train en validation accuracy %
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/val.png" width="300" height="100"/>
+
 - Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
