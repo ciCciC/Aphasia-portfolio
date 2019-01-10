@@ -186,6 +186,8 @@ Een reden voor het gebruik maken van de Tensorflow Core is meer aanpas mogelijkh
 
 Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Boundary Generator (CORPUS NL)</b> voor het ontwikkelen van een Phoneme Boundary Classifier.
 
+Het doel van het uitproberen van deze modellen is om uiteindelijk een model te gebruiken.
+
 - Random Forest Classifier
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
   
@@ -214,6 +216,26 @@ Deze modellen zijn getraind met de data die is gegenereerd door de <b>Phoneme Bo
 <img src="/notebooks_data/data_visualization/2difference.png" width="300" height="200"/>
 <p>Visualizatie N milliseconden audio signaal en MFCCs</p>
 <img src="/notebooks_data/data_visualization/3difference.png" width="640" height="400"/>
+
+<br />
+<h2>Oversampling</h2>
+<p>Om skewed classes tegen te gaan heb ik een "generateMoreData()" functie geschreven om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Deze functie is geimplementeerd in de notebooks van de modellen.</p>
+
+<p>Before oversampling</p>
+<img src="/notebooks_data/oversampling/before.png" width="450" height="350"/>
+
+<p>After oversampling</p>
+<img src="/notebooks_data/oversampling/after.png" width="450" height="350"/>
+
+<br />
+<h2>Model Selection</h2>
+<p>Bij dit onderdeel is het van belang om de meest interessante waardes te selecteren voor de hyperparameters. Per model wordt aangegeven om welke parameters het gaat met daarbij een geplotte resultaat. Voor verdere info zie de notebook per model. Voordat de model selection wordt uitgevoerd vindt eerst een <b>OVERSAMPLING</b> plaats om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Anders kampt de dataset natuurlijk met <b>Skewed Classes</b> en dat willen we niet.</p>
+
+<h3>Random Forest Classifier</h3>
+
+- notebook
+  - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
+
 
 <br />
 <h2>Evaluation</h2>
