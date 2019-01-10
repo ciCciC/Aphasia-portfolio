@@ -321,7 +321,7 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 <p>Na model selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
 
-- dataset: df_nondifference
+- Train, validation acc., Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Random Forest Classifier een betere validation acc en RECALL geeft op class 1 dan bij de dataset met verschil.</p>
@@ -333,7 +333,7 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 <p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
 
-- dataset: df_nondifference
+- Train, validation acc., Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/nondiff.png" width="600" height="300"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met MLP een betere validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
@@ -342,9 +342,10 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 <p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "aantal trainingsteps" heb ik het model getraind met de volledige datasets.</p>
 
-- dataset: df_nondifference
-<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/val.png" width="600" height="300"/>
-<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="600" height="300"/>
+- Train en validation acc.
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/val.png" width="300" height="100"/>
+- Recall en Precision score
+<img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
 <p>Uit deze resultaten zien we dat de dataset zonder verschil dus "df_nondifference" met Bi-LSTM een vergelijkbaar validation acc geeft en een hoger RECALL score op class 1 dan bij de dataset met verschil "df_difference".</p>
 
