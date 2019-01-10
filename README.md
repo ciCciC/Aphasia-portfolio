@@ -312,7 +312,9 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <br />
 <h2>Evaluation</h2>
 
-<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de notebook per model.</p>
+<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de onderwerp <b>Oversampling</b>.</p>
+
+<p>Bij dit onderdeel voer ik een evaluatie uit van de resultaten van de modellen die ik heb getraind. Uiteindelijk wordt één model gekozen (model selection) om vervolgens naar de laatste etappe "Diagnosis" te gaan.</p>
 
 <h3>Random Forest Classifier</h3>
 
@@ -343,17 +345,18 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - Recall en Precision score
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
+- Een score tabel
 
 | Score %        | RFC    | MLP   | Bi-LSTM |
 | -------------  |:------:| -----:| -------:|
-| Training acc.  | 0.606  | 0.624 |   0.757 |
-| Validation acc.| 0.597  | 0.617 |   0.578 |
-| Recall [0]     | 0.52   | 0.67  |   0.626 |
-| Recall [1]     | 0.67   | 0.57  |   0.509 |
-| Precision [0]  | 0.62   | 0.61  |   0.643 |
-| Precision [1]  | 0.59   | 0.63  |   0.490 |
+| Training acc.  | 0.563  | 0.624 |   0.757 |
+| Validation acc.| 0.562  | 0.617 |   0.578 |
+| Recall [0]     | 0.54   | 0.67  |   0.626 |
+| Recall [1]     | 0.59   | 0.57  |   0.509 |
+| Precision [0]  | 0.57   | 0.61  |   0.643 |
+| Precision [1]  | 0.56   | 0.63  |   0.490 |
 
-<p></p>
+<p>Uit de score tabel kunnen we zien dat het model MLP het beste resultaten heeft. Hij scoort het hoogst in de validation accuracy, Precision class 1 en een na beste op recall class 1. Dit betekent dat ik verder ga met MLP naar de etappe Diagnosis.</p>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
