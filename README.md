@@ -344,14 +344,14 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
 
-| Score %        | RFC           | MLP   | Bi-LSTM   |
-| -------------  |:-------------:| -----:| ---------:|
-| Training acc.  | 0.565         |   $12 |   $12 |
-| Validation acc.| 0.563         |   $12 |   $12 |
-| Recall [0]     | 0.49          |    $1 |   $12 |
-| Recall [1]     | 0.64          |    $1 |   $12 |
-| Precision [0]  | 0.58          |    $1 |   $12 |
-| Precision [1]  | 0.56          |    $1 |   $12 |
+| Score %        | RFC    | MLP   | Bi-LSTM |
+| -------------  |:------:| -----:| -------:|
+| Training acc.  | 0.606  | 0.624 |   0.757 |
+| Validation acc.| 0.597  | 0.617 |   0.578 |
+| Recall [0]     | 0.52   | 0.67  |   0.626 |
+| Recall [1]     | 0.67   | 0.57  |   0.509 |
+| Precision [0]  | 0.62   | 0.61  |   0.643 |
+| Precision [1]  | 0.59   | 0.63  |   0.490 |
 
 <p></p>
 
