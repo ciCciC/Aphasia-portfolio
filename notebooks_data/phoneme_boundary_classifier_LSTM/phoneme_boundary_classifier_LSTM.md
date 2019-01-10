@@ -41,11 +41,15 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
 ```
 
+    /opt/jupyterhub/anaconda/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+      return f(*args, **kwds)
+
+
 <h3>Kies een GPU voor de Tensorflow Session</h3>
 
 
 ```python
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 config = tf.ConfigProto(device_count = {'GPU': 0})
 config.gpu_options.per_process_gpu_memory_fraction = 0.5
@@ -568,8 +572,8 @@ def runSession(index, config, training_steps, batch_size, X_train, y_train, time
         val_accuracy, y_pred = sess.run([accuracy, y_p], feed_dict={X: test_data, Y: test_label})
         y_true = np.argmax(test_label, 1)
 
-        train_acc_neuron[index] = max(hist_train_acc)
-        val_acc_neuron[index] = val_accuracy
+        train_acc[index] = max(hist_train_acc)
+        val_acc[index] = val_accuracy
         recall_scorelist.append(recall_score(y_true, y_pred, pos_label=1, average=None))
         precision_scorelist.append(precision_score(y_true, y_pred, pos_label=1, average=None))
 ```
@@ -690,7 +694,7 @@ het hoogst is bij circa 8200 learning steps.')
 
 
 <h3>Trainen model</h3>
-<p>Van de resultaten hierboven zien we dat 70 neurons met 8200 learning steps hoogste Recall score geeft op class 1. Deze waardes  gaan we gebruiken om een Bi-LSTM classifier te trainen.</p>
+<p>Van de resultaten hierboven zien we dat de volgende waardes interessante validation en recall scores geven: 70 neurons en 4000 learning steps. Deze waardes  gaan we gebruiken om een Bi-LSTM classifier te trainen.</p>
 
 
 ```python
@@ -761,9 +765,10 @@ print('y_test:{}'.format(y_test.shape))
 ```python
 # Training Parameters
 learning_rate = 0.001
-training_steps = 8200
+training_steps = 4000
 batch_size = 128
 display_step = 1
+dropout = 0.5
 ```
 
 
@@ -787,7 +792,7 @@ for i in range(0,1):
 
     weights, biases = initVariable(num_neurons, num_classes)
     
-    logits = BiRNN(X, weights, biases, num_neurons, timesteps)
+    logits = BiRNN(X, weights, biases, num_neurons, timesteps, dropout)
     
     prediction = tf.nn.softmax(logits)
 
@@ -822,16 +827,24 @@ print("Finished")
 ```python
 print(f'Training acc. {train_acc}')
 print(f'Validation acc. {val_acc}')
-print('---------------------------')
+```
+
+    Training acc. [0.7578125]
+    Validation acc. [0.578125]
+
+
+
+```python
+print(f'Recall score [class 0]: {recall_scorelist[0][0]}')
 print(f'Recall score [class 1]: {recall_scorelist[0][1]}')
+print(f'Precision score [class 0]: {precision_scorelist[0][0]}')
 print(f'Precision score [class 1]: {precision_scorelist[0][1]}')
 ```
 
-    Training acc. [0.7734375]
-    Validation acc. [0.5390625]
-    ---------------------------
-    Recall score [class 1]: 0.7169811320754716
-    Precision score [class 1]: 0.4634146341463415
+    Recall score [class 0]: 0.6266666666666667
+    Recall score [class 1]: 0.5094339622641509
+    Precision score [class 0]: 0.6438356164383562
+    Precision score [class 1]: 0.4909090909090909
 
 
 <h1>- Dataset: df_difference</h1>
@@ -848,7 +861,7 @@ plt.show()
 ```
 
 
-![png](output_61_0.png)
+![png](output_62_0.png)
 
 
 
@@ -890,7 +903,7 @@ plt.title(f"After oversampling of label {label}")
 
 
 
-![png](output_65_1.png)
+![png](output_66_1.png)
 
 
 <p>Initialiseer one hot encoding</p>
@@ -944,9 +957,10 @@ print('y_test:{}'.format(y_test.shape))
 ```python
 # Training Parameters
 learning_rate = 0.001
-training_steps = 8200
+training_steps = 4000
 batch_size = 128
 display_step = 1
+dropout = 0.5
 ```
 
 
@@ -968,7 +982,7 @@ for i in range(0,1):
 
     weights, biases = initVariable(num_neurons, num_classes)
     
-    logits = BiRNN(X, weights, biases, num_neurons, timesteps)
+    logits = BiRNN(X, weights, biases, num_neurons, timesteps, dropout)
     
     prediction = tf.nn.softmax(logits)
 
@@ -1003,16 +1017,24 @@ print("Finished")
 ```python
 print(f'Training acc. {train_acc}')
 print(f'Validation acc. {val_acc}')
-print('---------------------------')
+```
+
+    Training acc. [0.7265625]
+    Validation acc. [0.5546875]
+
+
+
+```python
+print(f'Recall score [class 0]: {recall_scorelist[0][0]}')
 print(f'Recall score [class 1]: {recall_scorelist[0][1]}')
+print(f'Precision score [class 0]: {precision_scorelist[0][0]}')
 print(f'Precision score [class 1]: {precision_scorelist[0][1]}')
 ```
 
-    Training acc. [0.7109375]
-    Validation acc. [0.546875]
-    ---------------------------
-    Recall score [class 1]: 0.45454545454545453
-    Precision score [class 1]: 0.5769230769230769
+    Recall score [class 0]: 0.5806451612903226
+    Recall score [class 1]: 0.5303030303030303
+    Precision score [class 0]: 0.5373134328358209
+    Precision score [class 1]: 0.5737704918032787
 
 
 <h3>Conclusie</h3>
