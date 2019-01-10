@@ -476,22 +476,11 @@ print('Aangezien de focus op class 1 ligt is 70 neurons interessant.')
 
 
 ```python
-plotResult(train_acc_layer, val_acc_layer, [1,2,3], 
-           'Number of layers', 'MLP: Varying Number of layers')
-
 plotRecallPrecision(recall_scorelist, precision_scorelist, [1,2,3], 'Recall en Precision results', 'aantal layers')
 
 print('In deze plots kunnen we zien dat de Recall slechter scoort bij meer dan 1 layer bij class 1.')
 print('Aangezien de focus op class 1 ligt is 1 layer interessant.')
 ```
-
-
-![png](output_39_0.png)
-
-
-    Max validation acc.: 0.6089222222222223
-
-
 
 ![png](output_39_2.png)
 
