@@ -389,12 +389,14 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 | Score %        | RFC    | MLP   | Bi-LSTM |
 | -------------  |:------:| -----:| -------:|
-| Training acc.  | 0.563  | 0.624 |   0.757 |
-| Validation acc.| 0.562  | 0.617 |   0.578 |
-| Recall [0]     | 0.54   | 0.67  |   0.626 |
-| Recall [1]     | 0.59   | 0.57  |   0.509 |
-| Precision [0]  | 0.57   | 0.61  |   0.643 |
-| Precision [1]  | 0.56   | 0.63  |   0.490 |
+| Training acc.  | 0.56   | 0.62  |   0.76  |
+| Validation acc.| 0.56   | 0.62  |   0.58  |
+| Recall [0]     | 0.54   | 0.67  |   0.61  |
+| Recall [1]     | 0.59   | 0.57  |   0.51  |
+| Precision [0]  | 0.57   | 0.61  |   0.64  |
+| Precision [1]  | 0.56   | 0.63  |   0.49  |
+| F1 score  [0]  | 0.55   | 0.63  |   0.62  |
+| F1 score  [1]  | 0.57   | 0.60  |   0.50  |
 
 <p>Uit de score tabel kunnen we zien dat het model MLP het beste resultaten heeft. Hij scoort het hoogst in de validation accuracy, Precision class 1 en een na beste op recall class 1. Dit betekent dat ik verder ga met MLP naar de etappe Diagnosis.</p>
 
