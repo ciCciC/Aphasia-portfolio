@@ -386,14 +386,16 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/iterations2.png" width="500" height="200"/>
 
 <h3>Oplossing</h3>
-<p>Als oplossing ga ik gebruik maken van <b>Regularization</b> en <b>Training set size</b></p>
+<p>Als oplossing ga ik gebruik maken van <b>Regularization</b>.</p>
 
 - Regularization
-Door regularization eerst te plotten kunnen we zien welke waarde de beste resultaat geeft.
+<p>Door lambda waardes regularization eerst te plotten kunnen we zien welke waarde de beste resultaat geeft.</p>
+<p>Regularization values: [0, 1e-05, 0.001, 0.01, 0.02, 0.04, 0.08, 0.16, 0.32, 0.64, 1.28, 2.56, 5.12, 10.24]</p>
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/regularization.png" width="550" height="350"/>
+<p>Hierboven zien we bij lage lambda waarde HiGH VARIANCE en bij hoge lambda waarde HIGH BIAS. De lambda waardes: (0.64, 1.28, 2.56) geven betere generalization.</p>
 
-<p>Een ingezoomde plot op het leerproces</p>
-<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/regularization.png" width="500" height="300"/>
+<p>Na regularization heb ik de beste waarde gekozen om overfitting en underfitting verminderen.</p>
 
-Plot aanpak om high variance te verlagen
-Plot regularization om high variance weer te geven
-Plot training set size
+<p>Hieronder de plot van het finale model met de geselecteerde lambda waarde.</p>
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/finalmodel.png" width="550" height="350"/>
+<p>In deze plot kunnen we zien dat het model niet overfit of underfit maar generalized is.</p>
