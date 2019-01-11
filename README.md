@@ -6,6 +6,7 @@
 <h2>Reading guide</h2>
 
 - Courses
+- Scrumwise taskboards
 - Communication
 - Domain Knowledge
 - Data Collection
@@ -25,6 +26,13 @@
   - [DataCamp certifications](https://github.com/ciCciC/Aphasia-portfolio/blob/master/datacamp/datacamp_certifications.md)
 - Coursera
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
+
+<br />
+<h2>Scrumwise taskboards</h2>
+<p>Taken waaraan ik heb gewerkt</p>
+
+- Taskboard Scrumwise
+  - [Taskboard Scrumwise](/taskboard/taskboards.md)
 
 <br />
 <h2>Communication</h2>
