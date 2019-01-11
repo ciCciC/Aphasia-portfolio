@@ -122,7 +122,7 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
   - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataVoxforge/ScrapingDataVoxforge.md)
 
 <h3>- CORPUS data</h3>
-<p>CORPUS is een grote data bestaande uit Nederlands gesproken audio met gerelateerd woorden. Deze data is gratis verkrijgbaar op <a href="https://ivdnt.org/nieuws">deze link</a>. De data is gedownload en opgeslagen op de server door onze projectbegeleider. Voor het transformeren van de data naar de gewenste structuur om er mee aan de slag te kunnen heb ik een transformer geschreven. Die staat beschreven onder "Data Preperation".</p>
+<p>CORPUS is een grote data bestaande uit Nederlands gesproken audio met gerelateerd woorden. Deze data is gratis verkrijgbaar op <a href="https://ivdnt.org/nieuws">deze link</a>. De data is gedownload en opgeslagen op de server door onze projectbegeleider. Voor het transformeren van de data naar de gewenste structuur om er mee aan de slag te kunnen heb ik een transformer geschreven. Die staat beschreven onder "Data Preperation". Deze data collectie is van belang voor de <b>Phoneme Boundary Classifier</b>.</p>
   
 <h3>Extra - mappenstructuur voor verzamelde data</h3>
 <p>Als extra heb ik een methode geschreven die een mappenstructuur op de server creert voor de verzamelde data. Dit geeft de mogelijkheid om makkelijk data op te slaan, verwerken en aanmaken. Dit maakt de paden naar de data overzichtelijk dus een beter overzicht waar wat staat op de server.</p>
@@ -191,7 +191,7 @@ Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio sig
   - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
 
 <h3>- Ontwikkelen transformer CORPUS data in notebooks</h3>
-<p>Voor de data van CORPUS heb ik een transformer geschreven die de data van CORPUS naar de gewenste structuur transformeert bestaande uit kolommen "begin", "end", "word" en "audiopath" en als CSV bestand opslaat. Deze data wordt gebruikt bij de Phoneme Boundary Generator. Zie notebook voor verdere info. Deze uiteindelijke data wordt overigens ook gebruikt door mijn projectgenoten. Dus ik heb het niet alleen voor mezelf gedaan maar ook voor mijn projectgenoten.</p>
+<p>Voor de data van CORPUS heb ik een transformer geschreven die de data van CORPUS naar de gewenste structuur transformeert bestaande uit kolommen "begin", "end", "word" en "audiopath" en als CSV bestand opslaat. Deze data wordt gebruikt bij de <b>Phoneme Boundary Generator</b> die vervolgens een nieuwe dataset genereert voor de <b>Phoneme Boundary Classifier</b>. Zie notebook voor verdere info. Deze uiteindelijke data wordt overigens ook gebruikt door mijn projectgenoten. Dus ik heb het niet alleen voor mezelf gedaan maar ook voor mijn projectgenoten.</p>
 
 - Notebook
   - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
@@ -214,7 +214,7 @@ Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs he
 
 <br />
 <h2>Predictive Models</h2>
-Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde Nederlands gesproken CORPUS data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
+In dit project was mijn taak niet alleen data verzamelen of data voorbereiding maar ook het ontwikkelen en trainen van een Phoneme Boundary Classifier. Om een Phoneme Boundary Classifier model te kunnen trainen met de verzamelde Nederlands gesproken CORPUS data heb ik aantal machine en deep learning modellen uitgeprobeerd. Daarvoor heb ik de volgende modellen gebruikt:
 
 - Machine learning
   - Random Forest Classifier
