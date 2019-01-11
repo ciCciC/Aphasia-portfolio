@@ -446,14 +446,14 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <h3>Dataset genereren voor Jeroen en Erik</h3>
 
 - notebook
-  - [transformer mfcc naar woord](/extra/transformer_audio_word_to_mfcc.md)
-  - [transformer word,klanken en fonemen](/extra/transforming_corpus_data.md)
+  - [transformer mfcc, word, wordtranscription en fonemen](/extra/transformer_audio_word_to_mfcc.md)
+  - [transformer word, klanken en fonemen](/extra/transforming_corpus_data.md)
 
-<p>- Dataset MFCC naar woord waarvan alleen de woorden die beginnen met "st".</p>
+<p>- Dataset MFCC en woord waarvan alleen de woorden die beginnen met "st".</p>
 <img src="/extra/stwordlist.png" width="600" height="350"/>
-<p>- Dataset MFCC naar woord.</p>
+<p>- Dataset MFCC en woord.</p>
 <img src="/extra/wordlist.png" width="600" height="350"/>
-<p>- Dataset MFCC naar woord met klanken en fonemen code lijst.</p>
+<p>- Dataset MFCC, woord met klanken en fonemen code lijst.</p>
 <img src="/extra/fondecoder.png" width="650" height="350"/>
 
 <h3>Script als onderdeel genereren dataset voor Jeroen en Erik</h3>
