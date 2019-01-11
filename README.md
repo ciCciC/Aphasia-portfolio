@@ -374,8 +374,26 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <br />
 <h2>Diagnostics of the learning process</h2>
 
-Uiteindelijk 1 model!
-Plot learning steps/ iteratie om high variance weer te geven
+- notebook
+  - [phoneme boundary MLP classifier diagnostics](/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/phoneme_boundary_scikit_MLP_diagnos.md)
+
+<p>Bij dit onderdeel ga ik verder met het gekozen model MLP. Hier ga ik kijken met welke problemen het model kampt, bijv. High Bias of High Variance. Voor verdere info staat hierboven de link naar de notebook "phoneme boundary MLP classifier diagnostics".</p>
+
+<p>In de plot van iterations kunnen we zien dat we kampen met HIGH VARIANCE (Overfitting). Dus het model is te complex.</p>
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/iterations1.png" width="500" height="200"/>
+
+<p>Een ingezoomde plot op het leerproces</p>
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/iterations2.png" width="500" height="200"/>
+
+<h3>Oplossing</h3>
+<p>Als oplossing ga ik gebruik maken van <b>Regularization</b> en <b>Training set size</b></p>
+
+- Regularization
+Door regularization eerst te plotten kunnen we zien welke waarde de beste resultaat geeft.
+
+<p>Een ingezoomde plot op het leerproces</p>
+<img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/regularization.png" width="500" height="300"/>
+
 Plot aanpak om high variance te verlagen
 Plot regularization om high variance weer te geven
 Plot training set size
