@@ -444,6 +444,11 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <h2>Extra</h2>
 
 <h3>Dataset genereren voor Jeroen en Erik</h3>
+
+- notebook
+  - [transformer_audio_word_to_mfcc](/extra/transformer_audio_word_to_mfcc.md)
+  - [transformer word,klanken en fonemen](/extra/transforming_corpus_data.md)
+
 <p>- Dataset MFCC naar woord waarvan alleen de woorden die beginnen met "st".</p>
 <img src="/extra/stwordlist.png" width="600" height="350"/>
 <p>- Dataset MFCC naar woord.</p>
