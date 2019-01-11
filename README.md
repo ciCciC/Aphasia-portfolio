@@ -1,6 +1,23 @@
 <h1>Datascience portfolio Koray Poyraz</h1>
 <p>Minor: Datascience kb-74</p>
 <p>Project: Aphasia</p>
+
+<br />
+<h2>Reading guide</h2>
+
+- Courses
+- Communication
+- Domain Knowledge
+- Data Collection
+- Data Preperation
+- Predictive Models
+- Data Visualization
+- Oversampling
+- Model Selection
+- Evaluation
+- Diagnostics
+- Extra
+
 <br />
 <h2>Courses</h2>
 
@@ -409,3 +426,18 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <p>Hieronder de plot van het finale model met de geselecteerde lambda waarde.</p>
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/finalmodel.png" width="550" height="350"/>
 <p>In deze plot kunnen we zien dat het model niet overfit of underfit maar generalized is.</p>
+
+
+<br />
+<h2>Extra</h2>
+
+<h3>Dataset genereren voor Jeroen en Erik</h3>
+<p>- Dataset MFCC naar woord waarvan alleen de woorden die beginnen met "st".</p>
+<p>- Dataset MFCC naar woord.</p>
+<img src="/extra/wordlist.png" width="600" height="350"/>
+<p>- Dataset MFCC naar woord met klanken en fonemen code lijst.</p>
+<img src="/extra/fondecoder.png" width="650" height="350"/>
+
+<h3>Script als onderdeel genereren dataset voor Jeroen en Erik</h3>
+<p>- Script fonemen code decoder methode <- (Methode decodeert phonemen naar woord en creert phonemen lijst.)</p>
+<p>- Script woorden scraper methode</p>
