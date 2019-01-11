@@ -387,8 +387,7 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 
 - Een score tabel
 
-[0] = class 0
-[1] = class 1
+[0] = class 0,  [1] = class 1
 
 | Score %        | RFC    | MLP   | Bi-LSTM |
 | -------------  |:------:| -----:| -------:|
