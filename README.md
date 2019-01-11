@@ -12,9 +12,19 @@
 <br />
 <h2>Communication</h2>
 
-- Presentations
+- Presentations (Presentatie die ik heb gegeven maar ook de presentator heb geholpen met visualisatie van data.)
+  - [Presentaties](/presentations/presentations.md)
 - Summaries
-- Paper
+  - [Onderzoek DTW algoritme](https://drive.google.com/open?id=1LXNcv708e6wNzxt1yUf-5IvGmn7w8j28)
+  - [Desk-research naar Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
+  - [Desk-research naar Fonologie](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
+  - [Desk-research naar Fonetiek](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
+- Paper 
+  - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
+  - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+  - [Python For Audio Signal Processing](http://eprints.maynoothuniversity.ie/4115/1/40.pdf)
+  - [librosa: Audio and Music Signal Analysis in Python](http://conference.scipy.org/proceedings/scipy2015/pdfs/brian_mcfee.pdf)
+
 <br />
 
 <h2>Domain knowledge</h2>
@@ -61,9 +71,9 @@ Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kun
 
 - Literatuur
   - Geeft een beeld over de technieken die worden toegepast (op minder technisch niveau)
-  - [A Review on Speech Recognition Technique (wetenschappelijke)](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
+  - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
   - Geeft de stappen weer die worden genomen om de features te kunnen extracten van de audiosignalen (op technisch niveau)
-  - [Speech Processing for Machine Learning MFCCs (wetenschappelijke)](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
+  - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
   - Een GitHub repository met handige informatie over bestaande repositories voor een onderdeel van Speech Recognition systemen
   - [awesome-python-scientific-audio](https://github.com/faroit/awesome-python-scientific-audio#feature-extraction)
   - DTW (Dynamic Time Warping) wordt toegepast om woord signalen met elkaar te kunnen vergelijken. Hiervoor heb ik een desk-research gedaan en een samenvatting over geschreven.
