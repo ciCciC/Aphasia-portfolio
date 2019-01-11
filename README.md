@@ -21,8 +21,16 @@
 Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
 
 <h3>Jargon</h3>
-- API = dus hier de definitie van dus wat het betekent
-- Notebook = ....
+
+- API = staat voor "Application Programming Interface". Is een programma dat communiceert afhankelijk van de protocolen met een ander programma. Bijv. een programma dat ik heb ontwikkeld communiceert met de Google Speech to Text.
+- Notebook = Een webapplicatie waarmee men documenten kan maken en delen die live-code, vergelijkingen, visualisaties en verhalende tekst bevatten.
+- MFCCs = (Mel Frequency Cepstral Coefficient) een feature-extraction methode die veel wordt gebruikt in automatische spraak- en luidsprekerherkenning.  
+- Scraper = Ook wel webscraping genoemd, is voor het extraheren van gegevens van websites.
+- Bibliotheek = Zoals de naam al zegt, een bibliotheek met functies die je kunt krijgen om een programma of script te ontwikkelen.
+- SPHINX = een kant en klare Speech to Text tool/engine waarmee je een eigen Speech to Text kunt ontwikkelen
+- Phoneme boundary generator = Een generator waarmee foneem grenzen worden gegenereert.
+- STT = Speech to Text (van Google)
+
 
 <h3>- Vooronderzoek Aphasia (afasie)</h3>
 <p>Hier wordt een vooronderzoek gedaan naar afasie. Dit is van belang voor het opbouwen van kennis over afasie. Voor het opbouwen van kennis over Afasie heb ik gebruik gemaakt van de <b>techniek desk-research en interview</b>. Daarbij komen de <b>onderzoeksstrategie BIEB en VELD</b> bij kijken. Bij de literatuur wordt verwezen naar samenvattingen die ik van mijn desk-research heb gemaakt met daarin de referenties naar de bronnen:</p>
@@ -367,3 +375,7 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 <h2>Diagnostics of the learning process</h2>
 
 Uiteindelijk 1 model!
+Plot learning steps/ iteratie om high variance weer te geven
+Plot aanpak om high variance te verlagen
+Plot regularization om high variance weer te geven
+Plot training set size
