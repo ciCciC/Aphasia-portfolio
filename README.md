@@ -32,7 +32,7 @@
 <p>Taken waaraan ik heb gewerkt</p>
 
 - Taskboard Scrumwise
-  - [Taskboard Scrumwise](/taskboard/taskboards.md)
+  - [Taskboard Scrumwise](/taskboard/README.md)
 
 <br />
 <h2>Communication</h2>
