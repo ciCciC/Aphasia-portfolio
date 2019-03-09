@@ -38,7 +38,7 @@
 <h2>Communication</h2>
 
 - Presentations (Presentatie die ik heb gegeven maar ook de presentator heb geholpen met visualisatie van data.)
-  - [Presentaties](/presentations/presentations.md)
+  - [Presentaties](/presentations/README.md)
 - Summaries
   - [Onderzoek DTW algoritme](https://drive.google.com/open?id=1LXNcv708e6wNzxt1yUf-5IvGmn7w8j28)
   - [Desk-research naar Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
