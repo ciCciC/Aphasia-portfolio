@@ -238,7 +238,7 @@ Het doel van het uitproberen van deze modellen is om uiteindelijk een model te k
   - [phoneme boundary MLP Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
   
 - Bi-LSTM classifier
-  - [phoneme boundary Bi-LSTM Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_generator_v3/phoneme_boundary_generator_v3.md)
+  - [phoneme boundary Bi-LSTM Classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_classifier_LSTM/phoneme_boundary_classifier_LSTM.md)
 
 <p>De dataset die is gegenereerd met de V2 phoneme boundary generator wordt gebruikt bij de volgende onderwerpen: Oversampling, Model Selection, Evaluation en Diagnosis. De reden hiervoor is omdat hij een betere resultaat levert in validation accuracy en recall score.</p>
 
