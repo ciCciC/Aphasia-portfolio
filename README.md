@@ -36,13 +36,6 @@ Possibly, the rehabilition stress can be reduced by having patients do exercises
   - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
 
 <br />
-<h2>Scrumwise taskboards</h2>
-<p>Taken waaraan ik heb gewerkt</p>
-
-- Taskboard Scrumwise
-  - [Taskboard Scrumwise](/taskboard/README.md)
-
-<br />
 <h2>Communication</h2>
 
 - Presentations (Presentatie die ik heb gegeven maar ook de presentator heb geholpen met visualisatie van data.)
