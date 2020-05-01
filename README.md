@@ -71,16 +71,16 @@ Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte t
 
 <b>Desk-research (BIEB)</b>
 - Literatuur
-  - [Desk-research naar Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
+  - [Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
   
 Om de opgestelde onderzoekvragen te kunnen beantwoorden heb ik  aantal documenten over fonologie op het internet geraadpleegd. Onderzoek  gaat over de definitie van fonologie, het proces, hoe een spraak nauwkeurig gemaakt kan worden en welke programma’s gaan om met fonologie.
 
 - Literatuur
-  - [Desk-research naar Fonologie](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
+  - [Fonologie](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
   
 Na het lezen van gebruik van fonetiek in wetenschappelijke artikelen over speech to text systemen vond ik het handig om een desk-research naar te doen om te kunnen begrijpen wat fonetiek betekent.
 - Literatuur
-  - [Desk-research naar Fonetiek](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
+  - [Fonetiek](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
   
   
 <b>Interview (VELD) <br /></b>
