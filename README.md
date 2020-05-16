@@ -52,42 +52,42 @@ Possibly, the rehabilition stress can be reduced by having patients do exercises
 <br />
 
 <h2>Domain knowledge</h2>
-Hieronder staat per onderwerp beschreven de uitgevoerde onderzoeken, gebruikte technieken, verwijzingen naar literatuur en resultaten.
+Below is described per subject the studies performed, techniques used, references to literature and results.
 
 <h3>Jargon</h3>
 
-- API = staat voor "Application Programming Interface". Is een programma dat communiceert afhankelijk van de protocolen met een ander programma. Bijv. een programma dat ik heb ontwikkeld communiceert met de Google Speech to Text.
-- Notebook = Een webapplicatie waarmee men documenten kan maken en delen die live-code, vergelijkingen, visualisaties en verhalende tekst bevatten.
-- MFCCs = (Mel Frequency Cepstral Coefficient) een feature-extraction methode die veel wordt gebruikt in automatische spraak- en luidsprekerherkenning.  
-- Scraper = Ook wel webscraping genoemd, is voor het extraheren van gegevens van websites.
-- Bibliotheek = Zoals de naam al zegt, een bibliotheek met functies die je kunt krijgen om een programma of script te ontwikkelen.
-- SPHINX = een kant en klare Speech to Text tool/engine waarmee je een eigen Speech to Text kunt ontwikkelen
-- Phoneme boundary generator = Een generator waarmee foneem grenzen worden gegenereert.
-- STT = Speech to Text (van Google)
+- API = stands for "Application Programming Interface". Is a program that communicates depending on the protocols with another program. E.g. a program I developed communicates with the Google Speech to Text.
+- Notebook = A web application that allows you to create and share documents that contain live code, comparisons, visualisations and narrative text.
+- MFCCs = (Mel Frequency Cepstral Coefficient) a feature extraction method that is widely used in automatic speech and speaker recognition.  
+- Scraper = also called web scraping, is for extracting data from websites.
+- Library = a library of functions you can get to develop a program or script.
+- SPHINX = a ready-made Speech to Text tool / engine with which you can develop your own Speech to Text.
+- Phoneme boundary generator = a generator that generates phoneme boundaries.
+- STT = Speech to Text (Google Service)
 
 
-<h3>- Vooronderzoek Aphasia (afasie)</h3>
-<p>Hier wordt een vooronderzoek gedaan naar afasie. Dit is van belang voor het opbouwen van kennis over afasie. Voor het opbouwen van kennis over Afasie heb ik gebruik gemaakt van de <b>techniek desk-research en interview</b>. Daarbij komen de <b>onderzoeksstrategie BIEB en VELD</b> bij kijken. Bij de literatuur wordt verwezen naar samenvattingen die ik van mijn desk-research heb gemaakt met daarin de referenties naar de bronnen:</p>
+<h3>- Preliminary study Aphasia </h3>
+<p>Here is a preliminary study into aphasia. This is important for building knowledge. To build up knowledge, I used the <b> technique desk research and interview </b>. The literature refers to summaries that I have made from my desk research with references to the sources:</p>
 
 <b>Desk-research (BIEB)</b>
-- Literatuur
-  - [Afasie](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
+- Literature
+  - [Aphasia](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
   
-Om de opgestelde onderzoekvragen te kunnen beantwoorden heb ik  aantal documenten over fonologie op het internet geraadpleegd. Onderzoek  gaat over de definitie van fonologie, het proces, hoe een spraak nauwkeurig gemaakt kan worden en welke programma’s gaan om met fonologie.
+In order to answer the prepared research questions, I consulted a number of documents on phonology on the internet. Research is about the definition of phonology, the process, how a speech can be accurately made and which programs deal with phonology.
 
-- Literatuur
-  - [Fonologie](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
+- Literature
+  - [Phonology](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
   
-Na het lezen van gebruik van fonetiek in wetenschappelijke artikelen over speech to text systemen vond ik het handig om een desk-research naar te doen om te kunnen begrijpen wat fonetiek betekent.
-- Literatuur
-  - [Fonetiek](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
+After reading the use of phonetics in scientific articles about speech to text systems, I found it useful to do desk research to understand what phonetics means.
+- Literature
+  - [Phonetics](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
   
   
-<b>Interview (VELD) <br /></b>
-Bij de interviews was mijn taak niet alleen het stellen van vragen maar ook het opnemen van de interviews. Dit heb ik gedaan door gebruik te maken van de voicerecorder applicatie op mijn telefoon. Zodat we later de opnames nogmaals kunnen naluisteren voor verduidelijking van de gesprekken.
-Daarnaast was mijn taak om met Doortje samen een tweede interview te houden bij Rijndam Instituut met mevrouw Ineke (opdrachtgever) en de security manager, die gaat over AVG, over het krijgen van benodigde audio data en de veiligheid van de data. Het gesprek over AVG was van belang voor het gebruik kunnen maken van de Google Services. Voornamelijk de Google Text to Speech en Cloud Storage services. Dit was in eerste instantie van belang voor het z.s.m. kunnen omzetten van de afasie audiobestanden naar tekst.
+<b>Interview <br /></b>
+During the interviews my task was not only to ask questions but also to record the interviews. I did this by using the voice recorder application on my phone. So that we can later listen to the recordings again for clarification of the conversations.
+In addition, it was my task to hold a second interview at Rijndam Institute with Ms Ineke and the security manager (AVG), about getting the necessary audio data and the security of the data. The conversation about AVG was important for the use of the Google Services. Mainly the Google Text to Speech and Cloud Storage services. This was initially important for converting the aphasia audio files to text as soon as possible.
 
-- Literatuur
+- Literature
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
 <h3>- Belangrijke artikelen voor Speech Recognition systemen</h3>
