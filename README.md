@@ -64,24 +64,6 @@ Below is described per subject the studies performed, techniques used, reference
 - SPHINX = a ready-made Speech to Text tool / engine with which you can develop your own Speech to Text.
 - Phoneme boundary generator = a generator that generates phoneme boundaries.
 - STT = Speech to Text (Google Service)
-
-
-<h3>- Preliminary study Aphasia </h3>
-<p>Here is a preliminary study into aphasia. This is important for building knowledge. To build up knowledge, I used the <b> technique desk research and interview </b>. The literature refers to summaries that I have made from my desk research with references to the sources:</p>
-
-<b>Desk-research (BIEB)</b>
-- Literature
-  - [Aphasia](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
-  
-In order to answer the prepared research questions, I consulted a number of documents on phonology on the internet. Research is about the definition of phonology, the process, how a speech can be accurately made and which programs deal with phonology.
-
-- Literature
-  - [Phonology](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
-  
-After reading the use of phonetics in scientific articles about speech to text systems, I found it useful to do desk research to understand what phonetics means.
-- Literature
-  - [Phonetics](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
-  
   
 <b>Interview <br /></b>
 During the interviews my task was not only to ask questions but also to record the interviews. I did this by using the voice recorder application on my phone. So that we can later listen to the recordings again for clarification of the conversations.
@@ -90,80 +72,72 @@ In addition, it was my task to hold a second interview at Rijndam Institute with
 - Literature
   - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
-<h3>- Belangrijke artikelen voor Speech Recognition systemen</h3>
-Deze artikelen hebben mij geholpen om een beeld te krijgen om dit project te kunnen aanpakken. Bijv. de feature extraction technieken die worden toegepast of een pipeline die wordt gehanteerd voor Speech Recognition systemen. Ook gaf deze informatie mij de gelegenheid een idee voor te leggen aan mijn projectgroep om de juiste richting op te gaan.
+<h3>- Important articles for Speech Recognition systems</h3>
+These articles have helped me get a picture to tackle this project. E.g. the feature extraction techniques that are applied or a pipeline that is used for Speech Recognition systems. This information also gave me the opportunity to submit an idea to my project group to go in the right direction.
 
 - Literatuur
-  - Geeft een beeld over de technieken die worden toegepast (op minder technisch niveau)
+  - Provides a picture of the techniques that are applied
   - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
-  - Geeft de stappen weer die worden genomen om de features te kunnen extracten van de audiosignalen (op technisch niveau)
+  - Provides the steps taken to extract the features from the audio signals
   - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
-  - Een GitHub repository met handige informatie over bestaande repositories voor een onderdeel van Speech Recognition systemen
+  - A GitHub repository with useful information about existing repositories for Speech Recognition systems
   - [awesome-python-scientific-audio](https://github.com/faroit/awesome-python-scientific-audio#feature-extraction)
-  - DTW (Dynamic Time Warping) wordt toegepast om woord signalen met elkaar te kunnen vergelijken. Hiervoor heb ik een desk-research gedaan en een samenvatting over geschreven.
-  - [Onderzoek DTW algoritme](https://drive.google.com/open?id=1LXNcv708e6wNzxt1yUf-5IvGmn7w8j28)
+  - DTW (Dynamic Time Warping) is used to compare word signals. In time series, dynamic time warping (DTW) is one of the algorithms for measuring the similarity between two temporal sequences, which can vary in speed.
+  - [Understanding Dynamic Time Warping](https://databricks.com/blog/2019/04/30/understanding-dynamic-time-warping.html)
 
 <br />
 <br />
 <h2>Data Collection</h2>
-<p><b>"Data collection"</b> is van belang voor de etappe <b>"Data Preperation"</b>. Hieronder staan onderwerpen van taken die zijn verricht voor het verzamelen en structureel opslaan van de data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project. Ik heb data verzamelt uit verschillende bronnen. De bronnen zijn <b>"VoxForge", "Uva" en "CORPUS"</b>.</p>
+<p><b>"Data collection"</b> is important for the stage <b>"Data Preperation"</b>. Below are topics of tasks that have been performed to collect and structurally store the data for the project. Each topic can include desk research and notebooks to perform a specific task or tasks that are relevant to the project. Data has been collected from different sources. The sources are <b>"VoxForge", "Uva" and "CORPUS"</b>.</p>
 
 <h3>- Uva data</h3>
-<p>fon.hum.uva is een website waar een gratis database wordt aangeboden met daarin gesproken audio bestanden met daarbij horende teksten, <a href="http://www.fon.hum.uva.nl/IFA-SpokenLanguageCorpora/IFAcorpus/">link naar de website</a>. Voor Uva heb ik een scraper geschreven om de data van hun website af te halen. De reden voor de scraper is omdat de database niet te downloaden is dus moet men op hun website per klik downloaden en dat kost veel tijd.</p>
+<p>fon.hum.uva is a website where a free database is offered with spoken audio files and accompanying texts, <a href="http://www.fon.hum.uva.nl/IFA-SpokenLanguageCorpora/IFAcorpus/">link to the website</a>. For retrieving data from Uva I wrote a scraper to get the data from their website. The reason for the scraper is because the database is not downloadable so one has to download from their website per click and that takes a lot of time.</p>
 
 - Notebook
   - [Scraper Uva Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataUva/ScrapingDataUva.md)
 
 <h3>- VoxForge data</h3>
-<p>VoxForge is een website waar gesproken audio bestanden met daarbij horende teksten gratis worden aangeboden. Voor VoxForge heb ik ook een scraper geschreven om de data van hun website af te halen, want zoals bij Uva gebeurt downloaden per klik en dat kost veel tijd. Vandaar de scraper ook voor VoxForge. <a href="http://www.voxforge.org/home/downloads/speech/dutch">link naar de website</a>.</p>
+<p>VoxForge is a website where spoken audio files with accompanying texts are offered for free. For VoxForge I also wrote a scraper to get the data from their website, because like Uva, downloading per click takes a lot of time. Hence the scraper also for VoxForge. <a href="http://www.voxforge.org/home/downloads/speech/dutch">link to the website</a>.</p>
 
 - Notebook
   - [Scraper VoxForge Data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/ScrapingDataVoxforge/ScrapingDataVoxforge.md)
 
 <h3>- CORPUS data</h3>
-<p>CORPUS is een grote data bestaande uit Nederlands gesproken audio met gerelateerd woorden. Deze data is gratis verkrijgbaar op <a href="https://ivdnt.org/nieuws">deze link</a>. De data is gedownload en opgeslagen op de server door onze projectbegeleider. Voor het transformeren van de data naar de gewenste structuur om er mee aan de slag te kunnen heb ik een transformer geschreven. Die staat beschreven onder "Data Preperation". Deze data collectie is van belang voor de <b>Phoneme Boundary Classifier</b>.</p>
+<p>CORPUS is a large data consisting of Dutch spoken audio with related words. This data is available free of charge at <a href="https://ivdnt.org/nieuws">this link</a>. The data is downloaded and stored on the server by our project manager. I wrote a transformer to transform the data into the desired structure to get started. It is described under "Data Preperation". This data collection is important for the <b> Phoneme Boundary Classifier </b>. </p>
   
-<h3>Extra - mappenstructuur voor verzamelde data</h3>
-<p>Als extra heb ik een methode geschreven die een mappenstructuur op de server creert voor de verzamelde data. Dit geeft de mogelijkheid om makkelijk data op te slaan, verwerken en aanmaken. Dit maakt de paden naar de data overzichtelijk dus een beter overzicht waar wat staat op de server.</p>
+<h3>Extra - folder structure for collected data</h3>
+<p>As an extra I have written a method that creates a folder structure on the server for the collected data. This gives the possibility to easily store, process and create data. This makes the paths to the data clear, so a better overview of what is on the server.</p>
 
 - Notebook
-  - [Initialiseren mappenstructuur notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/initialize_directory_structure/initialize_directory_structure.md)
+  - [Initialize folder structure notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/initialize_directory_structure/initialize_directory_structure.md)
 
 <br />
 <br />
 <h2>Data Preperation</h2>
-<p>Hieronder staan onderwerpen van taken die zijn verricht voor het voorbereiden van data voor het project. Elk onderwerp kan bestaan uit een desk-research en notebooks voor het uitvoeren van een bepaalde taak of taken die relevant zijn voor het project. </p>
+<p>Below are topics of tasks performed to prepare data for the project. Each topic can include desk research and notebooks to perform a specific task or tasks that are relevant to the project. </p>
 
-<h3>- Ontwikkelen API Aphasia met Google Services</h3>
-<p>Deze API heb ik ontwikkeld om het proces van audio bestanden op een snelle manier te kunnen omzetten naar tekst. Anders moest dat proces handmatig moeten worden gedaan wat veel tijd kost. Daarnaast heeft deze API ook als functie om de timestamps van per woord in een audio signaal te kunnen krijgen. Dit was van belang om een dataset te kunnen creëren voor toekomstig gebruik bijv. voor een neurale netwerk.</p>
+<h3>- Develop API Aphasia by using Speech To Text Google Service</h3>
+<p>I developed this API to quickly convert the process of audio files to text. Otherwise, that process had to be done manually which takes a lot of time. In addition, this API also has the function to get the timestamps of per word in an audio signal. This was important to be able to create a data set for future use, e.g. for a neural network.</p>
 
-Om dit te kunnen realiseren heb ik een project aangemaakt in GitHub genaamd "Aphasia-project". Daarnaast heb ik dit project gekoppeld aan de Google Services met mijn eigen Credentials. Ook heb ik een installatie guide opgesteld voor mijn projectgenoten zodat zij gebruik konden maken van de API.
+To realize this I created a project on GitHub called "Aphasia project". I also prepared an installation guide for my project colleagues so that they can use the API.
 - Aphasia-project Github
   - [Aphasia-project Repository](https://github.com/ciCciC/Aphasia-project)
 
-Om een overzicht te kunnen krijgen over de bestaande Speech to Text services heb ik een desk-research naar gedaan. Ik ben tot conclusie gekomen dat er services bestaan van grote bedrijven die de Nederlandse taal niet ondersteunen behalve Google.
-- Literatuur
-  - [Bestaande Speech to Text services](https://drive.google.com/open?id=1odo6bqDnnt94Juf_-Ih-7UYFU-NXov1VFIhr93GRMb8)
-  
-Om de Speech to Text van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
-- Literatuur
-  - [Google Speech to Text documentatie](https://cloud.google.com/speech-to-text/docs/)
+To get an overview of the existing Speech to Text service, I did a desk research. I have come to the conclusion that there are services from large companies that do not support the Dutch language except Google. In order to link Google's Speech to Text to my API, I consulted the following literature.
+- Literature
+  - [Google Speech to Text documentation](https://cloud.google.com/speech-to-text/docs/)
 
-Google kent aantal regels als het komt tot transformeren van audio signaal naar tekst. Men (zonder gebruik van Cloud Storage) mag niet audio langer dan 1 minuut meegeven. Aangezien wij audio bestanden hebben die langer dan een minuut zijn moest er een ander oplossing voor komen. 
+Google has a number of rules when it comes to transforming audio signal into text. One (without using Cloud Storage) may not pass on audio for more than 1 minute. Since we have audio files that are longer than a minute, another solution had to be found.
 
-<b>Eerste oplossing</b> was, als we niet Cloud Storage mochten gebruiken vanwege AVG, een functie implementeren die een audio snijdt in minuten rekening houdend met niet het snijden door een woordsignaal. Deze funtie heb ik geimplementeerd om audio bestanden te kunnen snijden binnen 1 minuut en transformeren naar tekst.
-Snij functie:
+<b> First solution </b>was implementing a function that cuts an audio in minutes taking into account not cutting by word signal. I implemented this function to cut audio files within 1 minute and transform them to text.
+Cut functie:
 - [Method slicing audio PNG](https://drive.google.com/open?id=16UPK4XQozjz5NT5cblhc8xMPL29ilMy9)
 - [Method slicing audio SCRIPT](https://github.com/ciCciC/Aphasia-project/blob/master/AudioTranscribe.py)
 
-<b>Tweede oplossing</b> was een Cloud Storage service aanzetten en die koppelen aan de Aphasia API. Dit geeft de vrijheid van audio langer dan een minuut te kunnen transformeren naar tekst.
+<b> Second solution </b> was to enable a Cloud Storage service and link it to the Aphasia API. This gives the freedom to transform audio into text for more than a minute.
 
-Om de Cloud Storage van Google te kunnen koppelen aan mijn API heb ik de volgende literatuur geraadpleegd.
-- Literatuur
-  - [Google Cloud Storage documentatie](https://cloud.google.com/storage/docs/)
-  
-De architectuur van Aphasia API:
-- [Aphasia API architectuur PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
+The architecture of Aphasia API:
+- [Aphasia API architecture PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
 <h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
 <p>Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de <b>data collectie "Voxforge"</b> om een map vol met audio bestanden te kunnen transformeren naar woord timestamps en het creëren van CSV bestanden als dataset. Deze datasets bestaat uit kolommen "begin", "end", "word" en "audiopath" die uiteindelijk gebruikt zal worden bij de "Phoneme boundary generator". Zie notebook voor verdere informatie.</p>
