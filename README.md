@@ -139,46 +139,43 @@ Cut functie:
 The architecture of Aphasia API:
 - [Aphasia API architecture PNG](https://drive.google.com/open?id=1G1ckCQ-MElPZKq9lQn3mzqChB0-xHwtU)
 
-<h3>- Ontwikkelen STT (Speech to Text) timestamps generator in notebooks</h3>
-<p>Bij dit onderwerp heb ik de Aphasia API omgezet in een notebook met extra functies om een batch te kunnen uitvoeren op de <b>data collectie "Voxforge"</b> om een map vol met audio bestanden te kunnen transformeren naar woord timestamps en het creëren van CSV bestanden als dataset. Deze datasets bestaat uit kolommen "begin", "end", "word" en "audiopath" die uiteindelijk gebruikt zal worden bij de "Phoneme boundary generator". Zie notebook voor verdere informatie.</p>
+<h3>- Development of STT (Speech to Text) timestamps generator in notebooks</h3>
+<p>On this topic I converted the Aphasia API into a notebook with additional functions to batch run the <b> data collection "Voxforge" </b> to transform a folder full of audio files into word timestamps and creating CSV files as a dataset. This datasets consists of columns "begin", "end", "word" and "audiopath" which will eventually be used with the "Phoneme boundary generator". See notebook for more information.</p>
 
-Ik heb eerst een desk-research gedaan naar bestaande tools die uit een audio signaal de woord timestamps kunnen uithalen, zie "desk-research".
-- Desk-research
-  - [bestaande word alignment tools voor timestamps](https://drive.google.com/open?id=1-HS5edq61a1NErzNLFjARwHTNYibYAg6)
+- A desk-research into existing tools that can extract the word timestamps from an audio signal.
+  - [existing word alignment tools for timestamps](https://drive.google.com/open?id=1-HS5edq61a1NErzNLFjARwHTNYibYAg6)
 
 - Notebook
   - [stt timestamps generator notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/stt_timestamps_generator%20/stt_timestamps_generator.md)
 
-<h3>- Ontwikkelen Alignment in notebooks</h3>
-<p>Voor dit project heb ik een aligner script in notebook ontwikkeld. Ontwikkeling van de aligner was van belang voornamelijk voor het kunnen trainen van SPHINX (een kant en klare Speech to Text tool). Deze aligner is voornamelijk bestemd voor de data collectie van de "UVA" omdat de zinnen niet zijn alignt.</p>
+<h3>- Development of Alignment</h3>
+<p>An aligner script has been developed for this project. The aligner was important to be able to generate data as training set for SPHINX (a ready-to-use Speech to Text tool). The aligner is mainly intended for the data collection from "UVA" because the sentences are not aligned. The Aeneas library was used to realize this.</p>
 
-<p>Voor het kiezen van een goede bibliotheek voor het alignen van zinnen heb ik eerst een desk-research gedaan. Ik ben toen de bibliotheek "Aeneas" tegengekomen welke vaak wordt gebruikt voor alignen van zinnen.</p>
-
-- Aeneas documentatie
+- Aeneas documentation
   - [Aeneas documentation](https://www.readbeyond.it/aeneas/docs/)
 
-- Aeneas bibliotheek
+- Aeneas library
   - [Aeneas library](https://www.readbeyond.it/aeneas/)
 
 - Notebook
   - [aligner uva data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/aligner_uva_data/aligner_uva_data.md)
 
-<h3>- Ontwikkelen transformer CORPUS data in notebooks</h3>
-<p>Voor de data van CORPUS heb ik een transformer geschreven die de data van CORPUS naar de gewenste structuur transformeert bestaande uit kolommen "begin", "end", "word" en "audiopath" en als CSV bestand opslaat. Deze data wordt gebruikt bij de <b>Phoneme Boundary Generator</b> die vervolgens een nieuwe dataset genereert voor de <b>Phoneme Boundary Classifier</b>. Zie notebook voor verdere info. Deze uiteindelijke data wordt overigens ook gebruikt door mijn projectgenoten. Dus ik heb het niet alleen voor mezelf gedaan maar ook voor mijn projectgenoten.</p>
+<h3>- Development of a transformer for the CORPUS data</h3>
+<p>For the data of CORPUS, a transformer has been written that transforms the data of CORPUS to the desired structure consisting of columns "begin", "end", "word" and "audiopath" and save as CSV file. This data is used with the <b> Phoneme Boundary Generator </b> which then generates a new data set for the <b> Phoneme Boundary Classifier </b>. See notebook for further information. This data is also been used by my project colleagues.</p>
 
 - Notebook
-  - [transforming CORPUS data notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
+  - [transforming CORPUS data](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/transforming_corpus_data/transforming_corpus_data.md)
 
-<h3>- Ontwikkelen Phoneme boundary generator in notebooks</h3>
-<p>Na "Data Collection" en "Data Preperation" onderwerpen, die de data in een gewenste structuur hebben gezet, heb ik een Phoneme Boundary Generator ontwikkeld. Wat deze generator doet is het genereren van foneem grenzen als data door de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord samen te voegen. Deze dataset is om een <b>Phoneme Boundary Classifier</b> te kunnen trainen.</p>
+<h3>- Development of a Phoneme boundary generator</h3>
+<p>After "Data Collection" and "Data Preperation" topics, which have put the data in a desired structure, a Phoneme Boundary Generator has been developed. What this generator does is generate phoneme boundaries as data by concatenating the last N milliseconds of a word and beginning N milliseconds of the next word. This dataset is for training a <b> Phoneme Boundary Classifier </b>.</p>
 
-<p>Ik heb twee soorten generators ontwikkeld. De "V2" slaat de samengevoegde N milliseconden op, zoals hierboven beschreven, en "V3" slaat alleen het verschillen tussen de laatste N milliseconden van een woord en begin N milliseconden van het volgende woord op. Hiermee wil ik dus kijken welke een betere validation acc. en recall score levert. Voor verdere informatie over deze versies zie de notebooks.</p>
+<p>Two types of generators have been developed. The "V2" stores the aggregated N milliseconds as described above, and "V3" only stores the difference between the last N milliseconds of a word and the beginning N milliseconds of the next word. With this I want to see which approach produces a better validation accuracy and recall score.</p>
 
-Voor feature extraction van de audio signalen dus het verkrijgen van de MFCCs heb ik gebruik gemaakt van de bibliotheek en bron:
-- Bron
+For feature extraction of the audio signals and obtaining the MFCCs, the following library and source were used:
+- Source
   - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
 
-- Bibliotheek
+- Library
   - [python speech features library](https://github.com/jameslyons/python_speech_features)
 
 - Notebook
