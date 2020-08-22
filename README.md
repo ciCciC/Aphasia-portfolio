@@ -416,8 +416,8 @@ In the plot of learning steps we can see that the Recall score at class 1 is hig
 <h3>Generating a dataset for my colleagues</h3>
 
 - notebook
-  - [transformer mfcc, word, wordtranscription en fonemen](/extra/transformer_audio_word_to_mfcc.md)
-  - [transformer word, klanken en fonemen](/extra/transforming_corpus_data.md)
+  - [transformer mfcc, word, wordtranscription and phonemes](/extra/transformer_audio_word_to_mfcc.md)
+  - [transformer word, sounds and phonemes](/extra/transforming_corpus_data.md)
 
 <p>- Dataset MFCC and word of which only the words starting with "st".</p>
 <img src="/extra/stwordlist.png" width="600" height="350"/>
@@ -425,7 +425,3 @@ In the plot of learning steps we can see that the Recall score at class 1 is hig
 <img src="/extra/wordlist.png" width="600" height="350"/>
 <p>- Dataset MFCC, word with sounds and phonemes code list.</p>
 <img src="/extra/fondecoder.png" width="650" height="350"/>
-
-<h3>Script as part generate dataset for my colleagues</h3>
-<p>- Script phonemes code decoder method <- (Method decodes phonemes to word and creates phonemes list.)</p>
-<p>- Script words scraper method</p>
