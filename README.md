@@ -225,11 +225,11 @@ The goal of trying out these models is to ultimately choose a model to train it 
 <img src="/notebooks_data/data_visualization/3nondifference.png" width="640" height="300"/>
 
 <h3>- Data V3</h3>
-<p>Overzicht dataset</p>
+<p>Overview dataset</p>
 <img src="/notebooks_data/data_visualization/1difference.png" width="1000" height="400"/>
 <p>Info datatypes</p>
 <img src="/notebooks_data/data_visualization/2difference.png" width="300" height="200"/>
-<p>Visualization N milliseconden audio signaal en MFCCs</p>
+<p>Visualization N milliseconden audio signal and MFCCs</p>
 <img src="/notebooks_data/data_visualization/3difference.png" width="640" height="400"/>
 
 <br />
@@ -251,93 +251,93 @@ The goal of trying out these models is to ultimately choose a model to train it 
 - notebook
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
 
-<p>Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "max depth" en "estimators"</p>
+<p>This section shows which value is interesting to use for the hyper parameters "max depth" and "estimators"</p>
 -  Max depth
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/max_depth.png" width="450" height="350"/>
-Uit de plot van hierboven zien we dat het model complexer wordt dus overfit wanneer de waarde voor "Max of depth" hoger is dan 5. Dit geeft mij nu de mogelijkheid om een max depth te kiezen om een grotere dataset te gebruiken voor het trainen van het model.
+The plot above shows that the model becomes more complex, which leads to overfitting. This happens when the value for "Max of depth" is higher than 5. This information gives the possibility to choose a max depth to use a larger data set for training the model.
 <br />
 <br />
 - Estimator
 
-Hieronder train ik opnieuw een model maar dan met 1 miljoen dataset. Om een gewenste aantal dataset te kunnen realizeren heb ik een functie geschreven die een gebalanceerde gewenste aantal dataset teruggeeeft genaamd "getBatchData()", zie notebook. Bij deze selectie ligt de focus op de "estimators" waarde.
+Below, the model is retrained, but with 1 million dataset. In order to realize a desired number of dataset, a function has been written that returns a balanced desired number of dataset called "getBatchData ()", see notebook. In this selection, the focus is on the "estimators" value.
 
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/1_10_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/20_40_est.png" width="500" height="350"/>
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/98_100_est.png" width="500" height="350"/>
-<p>Bij de plots van hierboven zien we dat er vrij weinig verschil is na 8 estimators. Zelfs bij 100 estimators. De lijn van train en validation accuracy liggen niet ver van elkaar af. Dit geeft aan dat er geen sprake is van under- of overfitting. De estimator 32 geeft de hoogste validation accuracy score.</p>
+<p>The plots from above show that there is very little difference after 8 estimators. Even with 100 estimators. The line of train and validation accuracy are not far apart. This indicates that there is no under- or overfitting. The estimator 32 gives the highest validation accuracy score.</p>
 
 <h3>MLP Classifier</h3>
 
 - notebook
   - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
   
-<p>Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "num layers"</p>
--  Num neurons
+<p>Here we look at which value is interesting to use with the hyperparameters "number of neurons", "learning rate" and "number of layers"</p>
+-  Number of neurons
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/num_neurons.png" width="450" height="350"/>
-In de plot van aantal neurons kunnen we zien dat hij kampt met overfitting na 60 neurons.
+In the plot of the number of neurons we can see that he suffers from overfitting after 60 neurons.
 <br/>
 <br/>
 -  Learning rate
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/learningrate.png" width="450" height="350"/>
-In de plot van learning rate kunnen we zien dat de validation accuracy omlaag gaat bij hoger learning rate.
+In the learning rate plot we can see that the validation accuracy decreases with a higher learning rate.
 <br/>
 <br/>
--  Num layers
+-  Number of layers
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/layers.png" width="450" height="350"/>
-In de plot van aantal layers kunnen we zien dat de validation accuracy omlaag gaat en training accuracy hoger bij meer layers dus hij overfit.
+In the plot of number of layers we can see that the validation accuracy decreases and training accuracy increases with more layers, so he overfit.
 <br />
 <br />
-<p>Hier kijk ik naar wat voor classification report score de verschillende waardes van de hypermeter "num_neurons" en "num layers" geven.</p>
+<p>Here we look at what classification report score the different values of the hypermeter "num_neurons" and "num layers" give.</p>
 
-- num neurons
+- number of neurons
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/recallneurons2.png" style="width:100%" height="300"/>
-<p>In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.
-Aangezien de focus op class 1 ligt is 70 neurons interessant.</p>
+<p>In these plots we can see that the Recall at 70 neurons is highest at class 1 and lowest at class 0.
+Since the focus is on class 1, 70 neurons is interesting.</p>
 
-- num layers
+- number of layers
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/recalllayers2.png" style="width:100%" height="300"/>
-<p>In deze plots kunnen we zien dat de Recall slechter scoort bij meer dan 1 layer bij class 1.
-Aangezien de focus op class 1 ligt is 1 layer interessant.</p>
+<p>In these plots we can see that the Recall scores worse with more than 1 layer at class 1.
+Since the focus is on class 1, 1 layer is interesting.</p>
 
-<p>Van de resultaten hierboven zien we dat 70 neurons met 1 laag hoogste Recall score geeft op class 1. Deze waardes gaan we gebruiken om een MLP classifier.</p>
+<p>From the results above we see that 70 neurons with 1 layer gives the highest Recall score on class 1. We will use these values to create an MLP classifier.</p>
 
 <h3>Bi-LSTM</h3>
 
 - notebook
   - [phoneme boundary Bi-LSTM classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_classifier_LSTM/phoneme_boundary_classifier_LSTM.md)
 
-<p>Hier kijk ik naar welke waarde het beste kan worden gebruikt bij de hyperparameters "num neurons", "learning rate" en "learningsteps"</p>
--  Num neurons
+<p>Here we look at which value can best be used with the hyper parameters "num neurons", "learning rate" and "learningsteps".</p>
+-  Number of neurons
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_38_1.png" width="650" height="350"/>
-In deze plots kunnen we zien dat de Recall bij 70 neurons het hoogst is bij class 1 en laagst bij class 0.
-In de linker plot zien we dat we echter te maken hebben met overfitting.
+In these plots we can see that the Recall at 70 neurons is highest at class 1 and lowest at class 0.
+In the left plot we see that we are dealing with overfitting.
 <br/>
 <br/>
 -  Learning rate
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_40_1.png" width="650" height="350"/>
-In de plot van learning rate kunnen we zien dat de validation accuracy en Recall score bij class 1 omlaag gaat bij hoger learning rate.
+In the plot of learning rate, we can see that the validation accuracy and Recall score at class 1 decreases with a higher learning rate.
 <br/>
 <br/>
--  aantal trainingsteps
+-  number of training steps
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/output_42_1.png" width="650" height="350"/>
-In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het hoogst is bij circa 8200 learning steps. Echter kampen we bij de linker plot met een overfitting.
+In the plot of learning steps we can see that the Recall score at class 1 is highest at approximately 8200 learning steps. However, we are struggling with an overfitting in the left plot.
 
 <br />
 <br />
 <h2>Evaluation</h2>
 
-<p>Bij dit onderdeel heb ik voor elk model eerst "oversampling" uitgevoerd om de verhouding tussen de label 0 en 1 te verbeteren waardoor ze gebalanceerd zijn. Hiervoor heb ik de functie "generateMoreData()" geschreven, zie de onderwerp <b>Oversampling</b>.</p>
+<p>In this section, "oversampling" has been performed for each model first to improve the ratio between the label 0 and 1 so that they are balanced. For this I wrote the function "generateMoreData ()", see the topic <b> Oversampling </b>.</p>
 
-<p>Bij dit onderdeel voer ik een evaluatie uit van de resultaten van de modellen die ik heb getraind. Uiteindelijk wordt één model gekozen (model selection) om vervolgens naar de laatste etappe "Diagnosis" te gaan.</p>
+<p>In this part, an evaluation of the results of the models that have been trained is performed. Finally, one model is chosen (model selection) and then proceeds to the last stage "Diagnosis".</p>
 
 <h3>Random Forest Classifier</h3>
 
 - notebook
   - [phoneme boundary random forest classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_random_forest_classifier/phoneme_boundary_random_forest_classifier.md)
 
-<p>Na model selectie van de waarde voor "max depth" en "estimators" heb ik het model getraind met de volledige datasets.</p>
+<p>After model selection of the value for "max depth" and "estimators", the model was trained with the full datasets.</p>
 
-- Train, validation acc., Recall en Precision score
+- Train, validation acc., Recall and Precision score
 <img src="/notebooks_data/phoneme_boundary_random_forest_classifier/nondiff.png" width="600" height="300"/>
 
 <h3>MLP Classifier</h3>
@@ -345,9 +345,9 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - notebook
   - [phoneme boundary scikit MLP classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_scikit_MLP/phoneme_boundary_scikit_MLP.md)
 
-<p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "num layers" heb ik het model getraind met de volledige datasets.</p>
+<p>After selecting the values for "num neurons", "learning rate" and "num layers", the model was trained with the complete datasets.</p>
 
-- Train, validation acc., Recall en Precision score
+- Train, validation acc., Recall and Precision score
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP/nondiff.png" width="600" height="300"/>
 
 <h3>Bi-LSTM Classifier</h3>
@@ -355,15 +355,15 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - notebook
   - [phoneme boundary Bi-LSTM classifier](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/phoneme_boundary_classifier_LSTM/phoneme_boundary_classifier_LSTM.md)
 
-<p>Na deze selectie van de waarde voor "num neurons", "learning rate" en "aantal trainingsteps" heb ik het model getraind met de volledige datasets.</p>
+<p>After selecting the values for "num neurons", "learning rate" and "number of training steps", the model was trained with the complete datasets.</p>
 
-- Train en validation accuracy %
+- Train and validation accuracy %
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/val.png" width="300" height="100"/>
 
-- Recall en Precision score
+- Recall and Precision score
 <img src="/notebooks_data/phoneme_boundary_classifier_LSTM/recall.png" width="500" height="200"/>
 
-- Een score tabel
+- A score table
 
 [0] = class 0,  [1] = class 1
 
@@ -378,7 +378,7 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 | F1 score  [0]  | 0.55   | 0.63  |   0.62  |
 | F1 score  [1]  | 0.57   | 0.60  |   0.50  |
 
-<p>Uit de score tabel kunnen we zien dat het model MLP het beste resultaten heeft. Hij scoort het hoogst in de validation accuracy, Precision class 1 en een na beste op recall class 1. Dit betekent dat ik verder ga met MLP naar de etappe Diagnosis.</p>
+<p>From the score table we can see that the model MLP has the best results. He scores highest in validation accuracy, Precision class 1 and second best on recall class 1. This means that we proceed with MLP to the Diagnosis stage.</p>
 
 <br />
 <h2>Diagnostics of the learning process</h2>
@@ -386,46 +386,46 @@ In de plot van learning steps kunnen we zien dat de Recall score bij class 1 het
 - notebook
   - [phoneme boundary MLP classifier diagnostics](/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/phoneme_boundary_scikit_MLP_diagnos.md)
 
-<p>Bij dit onderdeel ga ik verder met het gekozen model MLP. Hier ga ik kijken met welke problemen het model kampt, bijv. High Bias of High Variance. Voor verdere info staat hierboven de link naar de notebook "phoneme boundary MLP classifier diagnostics".</p>
+<p>In this section we continue with the chosen model MLP. Here we look at the problems the model faces, eg High Bias or High Variance. For further information is above the link to the notebook "phoneme boundary MLP classifier diagnostics".</p>
 
-<p>In de plot van iterations kunnen we zien dat we kampen met HIGH VARIANCE (Overfitting). Dus het model is te complex.</p>
+<p>In the plot of iterations we can see that we are dealing with HIGH VARIANCE (Overfitting). So the model is too complex.</p>
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/iterations1.png" width="500" height="200"/>
 
-<p>Een ingezoomde plot op het leerproces</p>
+<p>A zoomed-in plot on the learning process</p>
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/iterations2.png" width="500" height="200"/>
 
-<h3>Oplossing</h3>
-<p>Als oplossing ga ik gebruik maken van <b>Regularization</b>.</p>
+<h3>Solution</h3>
+<p>As a solution we will use <b> Regularization </b>.</p>
 
 - Regularization
-<p>Door lambda waardes regularization eerst te plotten kunnen we zien welke waarde de beste resultaat geeft.</p>
+<p>By first plotting lambda values regularization we can see which value gives the best result.</p>
 <p>Regularization values: [0, 1e-05, 0.001, 0.01, 0.02, 0.04, 0.08, 0.16, 0.32, 0.64, 1.28, 2.56, 5.12, 10.24]</p>
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/regularization.png" width="550" height="350"/>
-<p>Hierboven zien we bij lage lambda waarde HiGH VARIANCE en bij hoge lambda waarde HIGH BIAS. De lambda waardes: (0.64, 1.28, 2.56) geven betere generalization.</p>
+<p>Above we see at a low lambda value HiGH VARIANCE and at a high lambda value HIGH BIAS. The lambda values: (0.64, 1.28, 2.56) give better generalization.</p>
 
-<p>Na regularization heb ik de beste waarde gekozen om overfitting en underfitting verminderen.</p>
+<p>After regularization, the best value was chosen to reduce overfitting and underfitting.</p>
 
-<p>Hieronder de plot van het finale model met de geselecteerde lambda waarde.</p>
+<p>Below the plot of the final model with the selected lambda value.</p>
 <img src="/notebooks_data/phoneme_boundary_scikit_MLP_diagnos/finalmodel.png" width="550" height="350"/>
-<p>In deze plot kunnen we zien dat het model niet overfit of underfit maar generalized is.</p>
+<p>In this plot we can see that the model is not overfit or underfit but generalized.</p>
 
 
 <br />
 <h2>Extra</h2>
 
-<h3>Dataset genereren voor Jeroen en Erik</h3>
+<h3>Generating a dataset for my colleagues</h3>
 
 - notebook
   - [transformer mfcc, word, wordtranscription en fonemen](/extra/transformer_audio_word_to_mfcc.md)
   - [transformer word, klanken en fonemen](/extra/transforming_corpus_data.md)
 
-<p>- Dataset MFCC en woord waarvan alleen de woorden die beginnen met "st".</p>
+<p>- Dataset MFCC and word of which only the words starting with "st".</p>
 <img src="/extra/stwordlist.png" width="600" height="350"/>
-<p>- Dataset MFCC en woord.</p>
+<p>- Dataset MFCC and word.</p>
 <img src="/extra/wordlist.png" width="600" height="350"/>
-<p>- Dataset MFCC, woord met klanken en fonemen code lijst.</p>
+<p>- Dataset MFCC, word with sounds and phonemes code list.</p>
 <img src="/extra/fondecoder.png" width="650" height="350"/>
 
-<h3>Script als onderdeel genereren dataset voor Jeroen en Erik</h3>
-<p>- Script fonemen code decoder methode <- (Methode decodeert phonemen naar woord en creert phonemen lijst.)</p>
-<p>- Script woorden scraper methode</p>
+<h3>Script as part generate dataset for my colleagues</h3>
+<p>- Script phonemes code decoder method <- (Method decodes phonemes to word and creates phonemes list.)</p>
+<p>- Script words scraper method</p>
