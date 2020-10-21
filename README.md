@@ -1,5 +1,5 @@
 <h1>Datascience portfolio Koray Poyraz</h1>
-<p>Minor: Datascience kb-74</p>
+<p>Semester: Datascience</p>
 <p>Project: Aphasia</p>
 
 **Description**
