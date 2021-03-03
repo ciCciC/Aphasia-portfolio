@@ -1,8 +1,6 @@
 <h1>Resultaten Coursera</h1>
 <p>Hieronder staan de resultaten van de weken 1,2,3 en 6.</p>
 
-<p>[Extra]:Ik heb de QUIZ "Octave/Matlab Tutorial" van WEEK 2 niet gedaan omdat het niet hoefde maar ik heb wel gespeeld met de COST FUNCTION in PYTHON, zie script helemaal onderaan deze pagina.</p>
-
 <p>Week 1</p>
 <img src="https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/week1.png"
 alt="drawing" width="600" height="400"/>
