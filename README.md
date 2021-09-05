@@ -64,13 +64,6 @@ Below is described per subject the studies performed, techniques used, reference
 - SPHINX = a ready-made Speech to Text tool / engine with which you can develop your own Speech to Text.
 - Phoneme boundary generator = a generator that generates phoneme boundaries.
 - STT = Speech to Text (Google Service)
-  
-<b>Interview <br /></b>
-During the interviews my task was not only to ask questions but also to record the interviews. I did this by using the voice recorder application on my phone. So that we can later listen to the recordings again for clarification of the conversations.
-In addition, it was my task to hold a second interview at Rijndam Institute with Ms Ineke and the security manager (AVG), about getting the necessary audio data and the security of the data. The conversation about AVG was important for the use of the Google Services. Mainly the Google Text to Speech and Cloud Storage services. This was initially important for converting the aphasia audio files to text as soon as possible.
-
-- Literature
-  - [Security and Privacy Considerations](https://cloud.google.com/storage/docs/gsutil/addlhelp/SecurityandPrivacyConsiderations)
 
 <h3>- Important articles for Speech Recognition systems</h3>
 These articles have helped me get a picture to tackle this project. E.g. the feature extraction techniques that are applied or a pipeline that is used for Speech Recognition systems. This information also gave me the opportunity to submit an idea to my project group to go in the right direction.
