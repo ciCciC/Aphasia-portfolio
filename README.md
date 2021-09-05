@@ -1,5 +1,5 @@
-<h1>Datascience portfolio Koray Poyraz</h1>
-<p>Semester: Datascience</p>
+<h1>Data Science portfolio Koray Poyraz</h1>
+<p>Semester: Data Science</p>
 <p>Project: Aphasia</p>
 
 **Description**
