@@ -13,8 +13,6 @@ Possibly, the rehabilition stress can be reduced by having patients do exercises
 <br />
 <h2>Reading guide</h2>
 
-- Courses
-- Scrumwise taskboards
 - Communication
 - Domain Knowledge
 - Data Collection
@@ -26,14 +24,6 @@ Possibly, the rehabilition stress can be reduced by having patients do exercises
 - Evaluation
 - Diagnostics
 - Extra
-
-<br />
-<h2>Courses</h2>
-
-- DataCamp
-  - [DataCamp certifications](https://github.com/ciCciC/Aphasia-portfolio/blob/master/datacamp/datacamp_certifications.md)
-- Coursera
-  - [Coursera](https://github.com/ciCciC/Aphasia-portfolio/blob/master/coursera/results.md)
 
 <br />
 <h2>Communication</h2>
