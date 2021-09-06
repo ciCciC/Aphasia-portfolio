@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/148533169.svg)](https://zenodo.org/badge/latestdoi/148533169)
+
 <h1>Data Science portfolio Koray Poyraz</h1>
 <p>Semester: Data Science</p>
 <p>Project: Aphasia</p>
