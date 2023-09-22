@@ -1,8 +1,8 @@
 [![DOI](https://zenodo.org/badge/148533169.svg)](https://zenodo.org/badge/latestdoi/148533169)
 
-<h1>Data Science portfolio Koray Poyraz</h1>
-<p>Semester: Data Science</p>
+<h1>Data Science</h1>
 <p>Project: Aphasia</p>
+<p>Author: Koray Poyraz</p>
 
 **Description**
 
@@ -30,11 +30,6 @@ Possibly, the rehabilition stress can be reduced by having patients do exercises
 <br />
 <h2>Communication</h2>
 
-- Summaries
-  - [DTW algorithm](https://drive.google.com/open?id=1LXNcv708e6wNzxt1yUf-5IvGmn7w8j28)
-  - [Aphasia](https://drive.google.com/open?id=1XC5KO49hhVlRnTzpUgk5_EsWqkBjdQA_)
-  - [Phonology](https://drive.google.com/open?id=1eQMhui_E9tXWjDe0CW03YpHo1Rr4H6cb)
-  - [Phonetics](https://drive.google.com/open?id=1NetEeGGN6kJM-wjqDAOdOYDvPhFIOtFv)
 - Paper 
   - [A Review on Speech Recognition Technique](https://pdfs.semanticscholar.org/1062/8132a34301f66a0af4bc485f05e3988cdc44.pdf)
   - [Speech Processing for Machine Learning MFCCs](https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html)
@@ -89,15 +84,7 @@ These articles have helped me get a picture to tackle this project. E.g. the fea
 
 <h3>- CORPUS data</h3>
 <p>CORPUS is a large data consisting of Dutch spoken audio with related words. This data is available free of charge at <a href="https://ivdnt.org/nieuws">this link</a>. The data is downloaded and stored on the server by our project manager. I wrote a transformer to transform the data into the desired structure to get started. It is described under "Data Preperation". This data collection is important for the <b> Phoneme Boundary Classifier </b>. </p>
-  
-<h3>Extra - folder structure for collected data</h3>
-<p>As an extra I have written a method that creates a folder structure on the server for the collected data. This gives the possibility to easily store, process and create data. This makes the paths to the data clear, so a better overview of what is on the server.</p>
 
-- Notebook
-  - [Initialize folder structure notebook](https://github.com/ciCciC/Aphasia-portfolio/blob/master/notebooks_data/initialize_directory_structure/initialize_directory_structure.md)
-
-<br />
-<br />
 <h2>Data Preperation</h2>
 <p>Below are topics of tasks performed to prepare data for the project. Each topic can include desk research and notebooks to perform a specific task or tasks that are relevant to the project. </p>
 
@@ -398,7 +385,7 @@ In the plot of learning steps we can see that the Recall score at class 1 is hig
 <br />
 <h2>Extra</h2>
 
-<h3>Generating a dataset for my colleagues</h3>
+<h3>Generating dataset consisting of wordtranscription and phonemes</h3>
 
 - notebook
   - [transformer mfcc, word, wordtranscription and phonemes](/extra/transformer_audio_word_to_mfcc.md)
